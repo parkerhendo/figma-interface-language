@@ -1,0 +1,26 @@
+
+declare Component as "Header" {
+  group(direction: "column", alignment: "center") {
+    Logo
+    Title[string]
+    Subtitle[string]
+  } 
+}
+
+describe Interface as "Sign up" for OnboardingFlow {
+  Header(
+    title="Welcome to Acme"
+    subtitle="Create an account to get started"
+  )
+  Form {
+    Row {
+      Input["First name"]
+      Input["Last name"]
+    }
+    Input["Email address"]
+    Input["Create password"]
+    Input["Confirm password"]
+    Spacer[tokens("space8")]
+    Button["Create account"]
+  }
+}
