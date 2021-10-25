@@ -8,6 +8,8 @@ A simple DSL for describing interfaces that can be compiled to build a Figma moc
 ##### Example ([Tweet](https://twitter.com/parkerhendo/status/1452407181106614280?s=20))
 
 ```javascript
+define ButtonColor = "#000000"
+
 declare Component as "Header" {
   group(direction: "column", alignment: "center") {
     Logo
@@ -30,7 +32,7 @@ describe Interface as "Sign up" for OnboardingFlow {
     Input["Create password"]
     Input["Confirm password"]
     Spacer[tokens("space8")]
-    Button["Create account"]
+    Button["Create account"].apply(buttonColor, background);
   }
 }
 ```
