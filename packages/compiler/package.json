@@ -1,0 +1,15 @@
+{
+  "name": "compiler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^16.11.5",
+    "nodemon": "^2.0.14",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "scripts": {
+    "start": "nodemon --exec ts-node index.ts ../../misc/frame.fil"
+  }
+}
