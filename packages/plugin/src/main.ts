@@ -1,4 +1,4 @@
-import { loadFontsAsync, once, showUI } from '@create-figma-plugin/utilities'
+import { loadFontsAsync, on, showUI } from '@create-figma-plugin/utilities'
 
 import { InsertCodeHandler } from './types'
 
@@ -12,13 +12,15 @@ async function buildInterface(json) {
 
   console.log(typeof content);
 
-  let frame;
+  let frame = null;
   if (descriptor == "TOKEN_INTERFACE") {
     frame = figma.createFrame()
     frame.name = params.name;
     frame.layoutMode = "VERTICAL";
+    frame.primaryAxisSizingMode = "AUTO";
     frame.primaryAxisAlignItems = "CENTER";
     frame.counterAxisAlignItems = "CENTER";
+    frame.counterAxisSizingMode = "AUTO";
     frame.resize(128, 128);
   }
 
@@ -34,11 +36,9 @@ async function buildInterface(json) {
 }
 
 export default function () {
-  once<InsertCodeHandler>('INSERT_CODE', async function (code: string) {
+  on<InsertCodeHandler>('INSERT_CODE', async function (code: string) {
     const parsedCode = interpret(code)
-    const result = await buildInterface(parsedCode);
-    figma.viewport.scrollAndZoomIntoView(figma.setSelection(result));
-    figma.closePlugin()
+    await buildInterface(parsedCode);
   })
-  showUI({ width: 400, height: 720 })
+  showUI({ width: 512, height: 720 })
 }
