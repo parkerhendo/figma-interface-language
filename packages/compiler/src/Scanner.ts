@@ -1,14 +1,10 @@
-import {isAtEnd} from './utils/isAtEnd';
-import {TokenType} from './types/tokens';
+import {TokenType} from './tokens';
 import Token, {ErrorToken} from './Token';
-
-import {isAlpha} from './utils/isAlpha';
-import {isDigit} from './utils/isDigit';
 
 /**
  * Tokenizer Spec.
  */
-const Spec: any = [
+const Spec: [RegExp, TokenType | null][] = [
   // -----------------------------------------------
   // Whitespaces:
 
@@ -26,41 +22,37 @@ const Spec: any = [
   // -----------------------------------------------
   // Symbols, delimiters:
   
-  [/^;/, ';'],
-  [/^\{/, '{'],
-  [/^\}/, '}'],
-  [/^\(/, '('],
-  [/^\)/, ')'],
-  [/^\,/, ','],
-  [/^\:/, ':'],
+  [/^;/, TokenType.TOKEN_SEMICOLEN],
+  [/^\{/, TokenType.TOKEN_LEFT_BRACE],
+  [/^\}/, TokenType.TOKEN_RIGHT_BRACE],
+  [/^\(/, TokenType.TOKEN_LEFT_PAREN],
+  [/^\)/, TokenType.TOKEN_RIGHT_PAREN],
+  [/^\,/, TokenType.TOKEN_COMMA],
+  [/^\:/, TokenType.TOKEN_COLEN],
 
   // -----------------------------------------------
   // Keywords:
-  [/^\bdeclare\b/, 'declare'],
-  [/^\bdescribe\b/, 'describe'],
-  [/^\bgroup\b/, 'group'],
-  [/^\bas\b/, 'as'],
-  [/^\bdirection\b/, 'direction'],
-  [/^\bgap\b/, 'gap'],
-  [/^\bpadding\b/, 'padding'],
+  [/^\bdeclare\b/, TokenType.TOKEN_DECLARE],
+  [/^\bdescribe\b/, TokenType.TOKEN_DESCRIBE],
+  [/^\bas\b/, TokenType.TOKEN_AS],
 
 
   // -----------------------------------------------
   // Type:
   
-  [/^\bcomponent\b/, 'component'],
-  [/^\binterface\b/, 'interface'],
-  [/^\bflow\b/, 'flow'],
+  [/^\bcomponent\b/, TokenType.TOKEN_COMPONENT],
+  [/^\binterface\b/, TokenType.TOKEN_INTERFACE],
+  [/^\bflow\b/, TokenType.TOKEN_FLOW],
   
   // -----------------------------------------------
   // Identifier:
-  [/^\w+/, 'INDENTIFIER'],
+  [/^\w+/, TokenType.TOKEN_IDENTIFIER],
 
   // -----------------------------------------------
   // Strings:
   
-  [/"[^"]*"/, 'STRING'],
-  [/'[^']*'/, 'STRING'],
+  [/"[^"]*"/, TokenType.TOKEN_STRING],
+  [/'[^']*'/, TokenType.TOKEN_STRING],
 ];
 
 
@@ -75,7 +67,7 @@ interface IScanner {
   isAtEnd() :boolean;
   hasMore() :boolean;
 
-  advance() :Token;
+  advance() :Token | null;
 
   match(regexp: RegExp, string :string | null) :any;
 }
@@ -91,7 +83,7 @@ export default class Scanner implements IScanner {
   } 
 
   init(str :string) :void {
-    console.log(str);
+    // console.log(str);
     this.source = str;
     this.cursor = 0;
     this.line = 1;
@@ -106,18 +98,19 @@ export default class Scanner implements IScanner {
   }
 
   advance() :Token {
-    if (this.isAtEnd()) return new Token("EOF", "\0");
+
+    if (!this.hasMore()) return new Token(TokenType.TOKEN_EOF, "\0");
 
     const string = this.source.slice(this.cursor);
 
     for (const [regexp, type] of Spec) {
       const val = this.match(regexp, string);
 
-      if (val === null) continue;
-      if (type === null) return this.advance();
+      if (val == null) continue;
+
+      if (type == null) return this.advance();
 
       const token = new Token(type, val);
-      // console.log("NEW TOKEN: ", token);
       return token;
     }
 

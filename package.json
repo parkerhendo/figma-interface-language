@@ -2,5 +2,7 @@
   "name": "figma-interface-language",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/compiler", "packages/plugin"]
 }

@@ -1,7 +1,7 @@
 {
   "name": "compiler",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "license": "MIT",
   "dependencies": {
     "@types/node": "^16.11.5",
@@ -10,6 +10,7 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "start": "nodemon --exec ts-node index.ts ../../misc/frame.fil"
+    "build": "tsc -p tsconfig.json",
+    "start": "nodemon --exec ts-node src/index.ts ../../misc/frame.fil"
   }
 }
