@@ -37,7 +37,7 @@ var Parser = /** @class */ (function () {
         switch ((_a = this.advance) === null || _a === void 0 ? void 0 : _a.type) {
             case tokens_1.TokenType.TOKEN_DESCRIBE: {
                 this.eat(tokens_1.TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
-                var descriptor = this.advance;
+                var descriptor = this.advance.type;
                 this.eat(tokens_1.TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
                 this.eat(tokens_1.TokenType.TOKEN_AS, "Expected 'as' before name.");
                 var name_1 = this.eat(tokens_1.TokenType.TOKEN_STRING, "Expected STRING after 'as'");

@@ -14,7 +14,7 @@ type Parameters = {
 
 type Declaration = {
   type: TokenType,
-  descriptor?: Token,
+  descriptor: TokenType,
   params?: Parameters,
   body?: any
 };
@@ -67,7 +67,7 @@ export default class Parser implements IParser {
       case TokenType.TOKEN_DESCRIBE: {
         this.eat(TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
 
-        const descriptor = this.advance;
+        const descriptor = this.advance.type;
         this.eat(TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
 
         this.eat(TokenType.TOKEN_AS, "Expected 'as' before name.");
