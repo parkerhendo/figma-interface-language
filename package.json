@@ -4,5 +4,13 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/compiler", "packages/plugin"]
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "compiler": "yarn workspace compiler start"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
 }

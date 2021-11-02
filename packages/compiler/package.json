@@ -1,5 +1,5 @@
 {
-  "name": "compiler",
+  "name": "@figma-interface-language/compiler",
   "version": "1.0.0",
   "main": "build/index.js",
   "license": "MIT",

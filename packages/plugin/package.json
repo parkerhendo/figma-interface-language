@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@figma-interface-language/compiler": "*",
+    "@create-figma-plugin/ui": "^1.7.1",
+    "@create-figma-plugin/utilities": "^1.7.1",
+    "preact": "^10",
+    "prismjs": "^1.25.0",
+    "react-simple-code-editor": "^0.11.0"
+  },
+  "devDependencies": {
+    "@create-figma-plugin/build": "^1.7.1",
+    "@create-figma-plugin/tsconfig": "^1.7.1",
+    "@figma/plugin-typings": "1.37.0",
+    "@types/prismjs": "^1.16.6",
+    "@types/react": "^16",
+    "react": "^16",
+    "typescript": "^4"
+  },
+  "scripts": {
+    "build": "build-figma-plugin --typecheck --minify",
+    "watch": "build-figma-plugin --typecheck --watch"
+  },
+  "figma-plugin": {
+    "editorType": [
+      "figma"
+    ],
+    "id": "figma-scribe",
+    "name": "Figma Scribe",
+    "main": "src/main.ts",
+    "ui": "src/ui.tsx"
+  }
+}

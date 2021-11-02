@@ -8,19 +8,20 @@ interface IParser {
   advance: Token | null;
 }
 
-type Parameters = {
+export type Parameters = {
   name: string,
 }
 
-type Declaration = {
+export type Declaration = {
   type: TokenType,
   descriptor: TokenType,
   params?: Parameters,
   body?: any
 };
-type DeclarationList = Declaration[];
 
-type Doc = { type: string, body: DeclarationList };
+export type DeclarationList = Declaration[];
+
+export type Doc = { type: string, body: DeclarationList };
 
 export default class Parser implements IParser {
   source: string;

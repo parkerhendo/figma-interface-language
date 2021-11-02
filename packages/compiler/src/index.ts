@@ -1,35 +1,22 @@
-import * as fs from 'fs';
-import {strict as assert} from 'assert';
+import Parser, {Doc} from './Parser';
 
-import Scanner from './Scanner';
-import Parser from './Parser';
+export function interpret(source :string): Doc {
+  const parser = new Parser();
+  return parser.parse(source);
+}
 
-// (function() {
-//   const file = process.argv.slice(2)[0];
-//   fs.readFile(file, 'utf8', (err, data) => {
-//     if (err) throw err; 
-//     const parser = new Parser();
 
-//     console.log(parser.parse(data));
-//   });
-// })();
-
-const tests = [
-  "../tests/define-interface.test.js"
-]
-
-const parser = new Parser();
-
+// FOR TESTING
 function exec() {
+  const parser = new Parser();
   const program = `
 
     describe interface as "Sign Up" { "hello" }
 
   `;
 
-  const prog = parser.parse(program);
 
-  // console.log("hello world")
+  const prog = parser.parse(program);
   console.log(JSON.stringify(prog, null, 2));
 }
 
