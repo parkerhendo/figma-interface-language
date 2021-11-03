@@ -440,7 +440,7 @@
     const params = json.body[0].params;
     const content = json.body[0].body;
     console.log(typeof content);
-    let frame;
+    let frame = null;
     if (descriptor == "TOKEN_INTERFACE") {
       frame = figma.createFrame();
       frame.name = params.name;
@@ -461,9 +461,7 @@
   function main_default() {
     once("INSERT_CODE", async function(code) {
       const parsedCode = (0, import_compiler.interpret)(code);
-      const result = await buildInterface(parsedCode);
-      figma.viewport.scrollAndZoomIntoView(figma.setSelection(result));
-      figma.closePlugin();
+      await buildInterface(parsedCode);
     });
     showUI({ width: 400, height: 720 });
   }
