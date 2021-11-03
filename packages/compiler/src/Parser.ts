@@ -39,7 +39,6 @@ export default class Parser implements IParser {
     this.scanner.init(str);
     this.advance = this.scanner.advance();
 
-
     return this.Document();
   }
 
@@ -63,7 +62,6 @@ export default class Parser implements IParser {
 
 
   Declaration() {
-    // console.log(this.advance?.type);
     switch (this.advance?.type) {
       case TokenType.TOKEN_DESCRIBE: {
         this.eat(TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
@@ -89,7 +87,6 @@ export default class Parser implements IParser {
   }
 
   DeclarationBody() {
-    // console.log("======= Declaration Body ========");
     this.eat(TokenType.TOKEN_LEFT_BRACE, "Expected '{' before block");
     const body = this.advance?.type === TokenType.TOKEN_RIGHT_BRACE ? null : this.advance?.value.slice(1, -1);
     this.eat(TokenType.TOKEN_STRING, "Value should be a string.");

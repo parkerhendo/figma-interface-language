@@ -17,7 +17,7 @@ function exec() {
 
 
   const prog = parser.parse(program);
-  console.log(JSON.stringify(prog, null, 2));
+  // console.log(JSON.stringify(prog, null, 2));
 }
 
 // manual text

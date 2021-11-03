@@ -1,10 +1,38 @@
-.container {
-  height: 164px;
-  overflow: auto;
+.header {
+  width: 100vw;
+  padding: 6px 8px;
+  border-bottom: 1px solid #d8d8da;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.editor {
-  min-height: 100%;
-  font-size: var(--font-size-16);
-  font-family: var(--font-family-code);
+.title {
+  font-family: "Inter", --apple-system;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #141414;
+}
+
+.button {
+  min-width: 64px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #d8d8da;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: #141414;
+  font-family: "Inter", --apple-system;
+  font-size: 12px;
+  font-weight: 600;  
+  line-height: 16px;
+  text-align: center;
+  transition: background 0.1s ease-in;
+}
+
+.button:hover {
+  cursor: pointer;
+  background: #f4f4f4;
 }

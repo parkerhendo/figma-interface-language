@@ -1,0 +1,30 @@
+.container {
+  height: 164px;
+  overflow: auto;
+}
+
+.editor {
+  counter-reset: line !important;
+  min-height: 100% !!important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  font-family: var(--font-family-code);
+}
+
+.editor #codeArea {
+  outline: none;
+  padding-left: 60px !important;
+}
+
+.editor pre {
+  padding-left: 60px !important;
+}
+
+.editor .editorLineNumber {
+  position: absolute;
+  left: 0px;
+  color: #cccccc;
+  text-align: right;
+  width: 40px;
+  font-weight: 100;
+}

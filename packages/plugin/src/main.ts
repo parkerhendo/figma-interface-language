@@ -1,4 +1,5 @@
-import { loadFontsAsync, on, showUI } from '@create-figma-plugin/utilities'
+import { loadFontsAsync, on, once, showUI } from '@create-figma-plugin/utilities'
+import fetch from 'node-fetch';
 
 import { InsertCodeHandler } from './types'
 
@@ -9,8 +10,6 @@ async function buildInterface(json) {
   const descriptor = json.body[0].descriptor;
   const params = json.body[0].params;
   const content = json.body[0].body;
-
-  console.log(typeof content);
 
   let frame = null;
   if (descriptor == "TOKEN_INTERFACE") {
@@ -35,8 +34,15 @@ async function buildInterface(json) {
   return frame;
 }
 
-export default function () {
-  on<InsertCodeHandler>('INSERT_CODE', async function (code: string) {
+function getComponents() {
+  console.log('components!!!!!!!!!!!');
+  // const data = await api("https://api.figma.com/v1/files/5otfo5aNKz5sgwGJZxCXrP");
+  fetch('http://randomuser.me/api').then(x => x.json()).then(data => console.log(data));
+}
+
+export default function() {
+  on<InsertCodeHandler>('INSERT_CODE', async function(code: string) {
+    getComponents();
     const parsedCode = interpret(code)
     await buildInterface(parsedCode);
   })
