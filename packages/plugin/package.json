@@ -1,8 +1,10 @@
 {
+  "name": "@figma-interface-language/plugin",
+  "version": "1.0.0",
   "dependencies": {
-    "@figma-interface-language/compiler": "*",
     "@create-figma-plugin/ui": "^1.7.1",
     "@create-figma-plugin/utilities": "^1.7.1",
+    "@figma-interface-language/compiler": "^1.0.0",
     "preact": "^10",
     "prismjs": "^1.25.0",
     "react-simple-code-editor": "^0.11.0"

@@ -33,14 +33,13 @@ var Parser = /** @class */ (function () {
     };
     Parser.prototype.Declaration = function () {
         var _a;
-        // console.log(this.advance?.type);
         switch ((_a = this.advance) === null || _a === void 0 ? void 0 : _a.type) {
             case tokens_1.TokenType.TOKEN_DESCRIBE: {
                 this.eat(tokens_1.TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
                 var descriptor = this.advance.type;
                 this.eat(tokens_1.TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
-                this.eat(tokens_1.TokenType.TOKEN_AS, "Expected 'as' before name.");
                 var name_1 = this.eat(tokens_1.TokenType.TOKEN_STRING, "Expected STRING after 'as'");
+                this.eat(tokens_1.TokenType.TOKEN_AS, "Expected 'as' before name.");
                 var body = this.advance.value !== tokens_1.TokenType.TOKEN_RIGHT_BRACE ? this.DeclarationBody() : [];
                 return {
                     type: tokens_1.TokenType.TOKEN_DESCRIBE,
@@ -53,7 +52,6 @@ var Parser = /** @class */ (function () {
     };
     Parser.prototype.DeclarationBody = function () {
         var _a, _b;
-        // console.log("======= Declaration Body ========");
         this.eat(tokens_1.TokenType.TOKEN_LEFT_BRACE, "Expected '{' before block");
         var body = ((_a = this.advance) === null || _a === void 0 ? void 0 : _a.type) === tokens_1.TokenType.TOKEN_RIGHT_BRACE ? null : (_b = this.advance) === null || _b === void 0 ? void 0 : _b.value.slice(1, -1);
         this.eat(tokens_1.TokenType.TOKEN_STRING, "Value should be a string.");

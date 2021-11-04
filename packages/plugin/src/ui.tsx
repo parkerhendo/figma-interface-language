@@ -11,24 +11,22 @@ import styles from './styles.css'
 import { InsertCodeHandler } from './types'
 
 function Plugin() {
-  const [code, setCode] = useState(`describe interface as "Sign up" {\n  "Hello world"\n}`)
+  const [code, setCode] = useState(`describe interface "Sign up" as {\n  "Hello world"\n}`)
   const handleInsertCodeButtonClick = useCallback(
-    function() {
+    function () {
       emit<InsertCodeHandler>('INSERT_CODE', code)
     },
     [code]
   )
   return (
     <div>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Scratch Pad</h1>
-          <button className={styles.button} onClick={handleInsertCodeButtonClick}>
-           Run 
-          </button>
-        </div>
-        <TextEditor code={code} setCode={setCode} />
+      <div className={styles.header}>
+        <h1 className={styles.title}>Scratch Pad</h1>
+        <button className={styles.button} onClick={handleInsertCodeButtonClick}>
+          Run
+        </button>
       </div>
+      <TextEditor code={code} setCode={setCode} />
     </div>
   )
 }

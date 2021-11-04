@@ -1,9 +1,7 @@
 (() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
-  var __defProps = Object.defineProperties;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
   var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __getProtoOf = Object.getPrototypeOf;
@@ -21,20 +19,7 @@
       }
     return a3;
   };
-  var __spreadProps = (a3, b3) => __defProps(a3, __getOwnPropDescs(b3));
   var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
-  var __objRest = (source, exclude) => {
-    var target = {};
-    for (var prop in source)
-      if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
-        target[prop] = source[prop];
-    if (source != null && __getOwnPropSymbols)
-      for (var prop of __getOwnPropSymbols(source)) {
-        if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
-          target[prop] = source[prop];
-      }
-    return target;
-  };
   var __esm = (fn2, res) => function __init() {
     return fn2 && (res = (0, fn2[Object.keys(fn2)[0]])(fn2 = 0)), res;
   };
@@ -58,7 +43,7 @@
     return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
   };
 
-  // node_modules/preact/dist/preact.module.js
+  // ../../node_modules/preact/dist/preact.module.js
   function a(n2, l3) {
     for (var u3 in l3)
       n2[u3] = l3[u3];
@@ -345,7 +330,7 @@
   }
   var n, l, u, i, t, r, o, f, e, c, s;
   var init_preact_module = __esm({
-    "node_modules/preact/dist/preact.module.js"() {
+    "../../node_modules/preact/dist/preact.module.js"() {
       e = {};
       c = [];
       s = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
@@ -370,18 +355,7 @@
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/utilities/create-class-name.js
-  function createClassName(classNames) {
-    return classNames.filter(function(className) {
-      return className !== null;
-    }).join(" ");
-  }
-  var init_create_class_name = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/utilities/create-class-name.js"() {
-    }
-  });
-
-  // node_modules/preact/hooks/dist/hooks.module.js
+  // ../../node_modules/preact/hooks/dist/hooks.module.js
   function m2(t3, r3) {
     l.__h && l.__h(u2, t3, o2 || r3), o2 = 0;
     var i3 = u2.__H || (u2.__H = { __: [], __h: [] });
@@ -467,7 +441,7 @@
   }
   var t2, u2, r2, o2, i2, c2, f2, e2, a2, v2, b2;
   var init_hooks_module = __esm({
-    "node_modules/preact/hooks/dist/hooks.module.js"() {
+    "../../node_modules/preact/hooks/dist/hooks.module.js"() {
       init_preact_module();
       o2 = 0;
       i2 = [];
@@ -517,268 +491,7 @@
     }
   });
 
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/49e13a0c-3c79-4700-aa6e-bfc814939e7e/loading-indicator.js
-  var loading_indicator_default;
-  var init_loading_indicator = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/49e13a0c-3c79-4700-aa6e-bfc814939e7e/loading-indicator.js"() {
-      if (document.getElementById("2766cebe48") === null) {
-        const element = document.createElement("style");
-        element.id = "2766cebe48";
-        element.textContent = `._loadingIndicator_12ibq_1 {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-}
-
-._svg_12ibq_8 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  animation: _rotating_12ibq_1 0.5s linear infinite;
-  fill: currentColor;
-}
-._accent_12ibq_17 {
-  fill: var(--color-accent);
-}
-._black-30_12ibq_20 {
-  fill: var(--color-black-30);
-}
-._black-80_12ibq_23 {
-  fill: var(--color-black-80);
-}
-._blue_12ibq_26 {
-  fill: var(--color-blue);
-}
-._white_12ibq_29 {
-  fill: var(--color-white);
-}
-._white-20_12ibq_32 {
-  fill: var(--color-white-20-translucent);
-}
-._white-40_12ibq_35 {
-  fill: var(--color-white-40-translucent);
-}
-
-@keyframes _rotating_12ibq_1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sb2FkaW5nLWluZGljYXRvci9sb2FkaW5nLWluZGljYXRvci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBa0I7RUFDbEIsV0FBVztFQUNYLFlBQVk7RUFDWixjQUFjO0FBQ2hCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLE1BQU07RUFDTixPQUFPO0VBQ1AsV0FBVztFQUNYLFlBQVk7RUFDWixpREFBd0M7RUFDeEMsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSx5QkFBeUI7QUFDM0I7QUFDQTtFQUNFLDJCQUEyQjtBQUM3QjtBQUNBO0VBQ0UsMkJBQTJCO0FBQzdCO0FBQ0E7RUFDRSx1QkFBdUI7QUFDekI7QUFDQTtFQUNFLHdCQUF3QjtBQUMxQjtBQUNBO0VBQ0UsdUNBQXVDO0FBQ3pDO0FBQ0E7RUFDRSx1Q0FBdUM7QUFDekM7O0FBRUE7RUFDRTtJQUNFLHVCQUF1QjtFQUN6QjtFQUNBO0lBQ0UseUJBQXlCO0VBQzNCO0FBQ0YiLCJmaWxlIjoibm9kZV9tb2R1bGVzL0BjcmVhdGUtZmlnbWEtcGx1Z2luL3VpL2xpYi9jb21wb25lbnRzL2xvYWRpbmctaW5kaWNhdG9yL2xvYWRpbmctaW5kaWNhdG9yLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5sb2FkaW5nSW5kaWNhdG9yIHtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBtYXJnaW46IDAgYXV0bztcbn1cblxuLnN2ZyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICB3aWR0aDogMTZweDtcbiAgaGVpZ2h0OiAxNnB4O1xuICBhbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xuICBmaWxsOiBjdXJyZW50Q29sb3I7XG59XG4uYWNjZW50IHtcbiAgZmlsbDogdmFyKC0tY29sb3ItYWNjZW50KTtcbn1cbi5ibGFjay0zMCB7XG4gIGZpbGw6IHZhcigtLWNvbG9yLWJsYWNrLTMwKTtcbn1cbi5ibGFjay04MCB7XG4gIGZpbGw6IHZhcigtLWNvbG9yLWJsYWNrLTgwKTtcbn1cbi5ibHVlIHtcbiAgZmlsbDogdmFyKC0tY29sb3ItYmx1ZSk7XG59XG4ud2hpdGUge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZSk7XG59XG4ud2hpdGUtMjAge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZS0yMC10cmFuc2x1Y2VudCk7XG59XG4ud2hpdGUtNDAge1xuICBmaWxsOiB2YXIoLS1jb2xvci13aGl0ZS00MC10cmFuc2x1Y2VudCk7XG59XG5cbkBrZXlmcmFtZXMgcm90YXRpbmcge1xuICBmcm9tIHtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuIl19 */`;
-        document.head.append(element);
-      }
-      loading_indicator_default = { "loadingIndicator": "_loadingIndicator_12ibq_1", "svg": "_svg_12ibq_8", "rotating": "_rotating_12ibq_1", "accent": "_accent_12ibq_17", "black-30": "_black-30_12ibq_20", "black-80": "_black-80_12ibq_23", "blue": "_blue_12ibq_26", "white": "_white_12ibq_29", "white-20": "_white-20_12ibq_32", "white-40": "_white-40_12ibq_35" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/loading-indicator/loading-indicator.js
-  function LoadingIndicator(_a) {
-    var _b = _a, { color } = _b, rest = __objRest(_b, ["color"]);
-    return v("div", __spreadProps(__spreadValues({}, rest), { class: loading_indicator_default.loadingIndicator }), v("svg", { class: createClassName([
-      loading_indicator_default.svg,
-      typeof color === "undefined" ? null : loading_indicator_default[color]
-    ]) }, v("path", { d: "M8 15C11.866 15 15 11.866 15 8C15 6.7865 14.6912 5.64511 14.1479 4.65013L15.0263 4.17174C15.6471 5.30882 16 6.6132 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 5.54138 1.10909 3.34181 2.85426 1.8743L3.47761 2.65678C1.96204 3.94081 1 5.85806 1 8C1 11.866 4.13401 15 8 15Z" })));
-  }
-  var init_loading_indicator2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/loading-indicator/loading-indicator.js"() {
-      init_preact_module();
-      init_create_class_name();
-      init_loading_indicator();
-    }
-  });
-
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/c3b095cb-353f-42d8-b964-89fde774ba23/button.js
-  var button_default;
-  var init_button = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/c3b095cb-353f-42d8-b964-89fde774ba23/button.js"() {
-      if (document.getElementById("032c6fd9e6") === null) {
-        const element = document.createElement("style");
-        element.id = "032c6fd9e6";
-        element.textContent = `._button_12lb8_1 {
-  position: relative;
-  z-index: var(--z-index-1);
-  display: inline-block;
-}
-._button_12lb8_1 button {
-  display: inline-block;
-  height: 32px;
-  color: currentColor;
-  border-radius: var(--border-radius-6);
-}
-
-._disabled_12lb8_13 {
-  opacity: var(--opacity-30);
-}
-._disabled_12lb8_13 button {
-  cursor: not-allowed;
-}
-
-._primary_12lb8_20 {
-  color: var(
-    --color-white
-  ); /* Set the color of the \`button\` element and \`LoadingIndicator\` */
-}
-._primary_12lb8_20 button {
-  padding: 0 14px;
-  line-height: 28px;
-  background-color: var(--color-accent);
-  border: 2px solid transparent;
-}
-._primary_12lb8_20:not(._disabled_12lb8_13) button:focus {
-  border-color: var(--color-black-30-translucent);
-}
-._primary_12lb8_20._destructive_12lb8_34 {
-  color: var(--color-white);
-}
-._primary_12lb8_20._destructive_12lb8_34 button {
-  background-color: var(--color-red);
-}
-._primary_12lb8_20._disabled_12lb8_13 button {
-  background-color: var(--color-black);
-}
-
-._secondary_12lb8_44 {
-  color: var(--color-black-80);
-}
-._secondary_12lb8_44 button {
-  padding: 0 15px;
-  line-height: 30px;
-  background-color: transparent;
-  border: 1px solid var(--color-black-80);
-}
-._secondary_12lb8_44:not(._disabled_12lb8_13) button:focus {
-  padding: 0 14px;
-  line-height: 28px;
-  border-color: var(--color-accent);
-  border-width: 2px;
-}
-._secondary_12lb8_44._destructive_12lb8_34 {
-  color: var(--color-red);
-}
-._secondary_12lb8_44._destructive_12lb8_34 button {
-  border-color: var(--color-red);
-}
-._secondary_12lb8_44._destructive_12lb8_34:not(._disabled_12lb8_13) button:focus {
-  border-color: var(--color-red);
-}
-
-._fullWidth_12lb8_69 {
-  display: block;
-}
-._fullWidth_12lb8_69 button {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-._loading_12lb8_80 button {
-  color: rgba(0, 0, 0, 0); /* Hide the button text */
-}
-._loadingIndicator_12lb8_83 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9idXR0b24vYnV0dG9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFrQjtFQUNsQix5QkFBeUI7RUFDekIscUJBQXFCO0FBQ3ZCO0FBQ0E7RUFDRSxxQkFBcUI7RUFDckIsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQixxQ0FBcUM7QUFDdkM7O0FBRUE7RUFDRSwwQkFBMEI7QUFDNUI7QUFDQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFOztHQUVDLEVBQUUsaUVBQWlFO0FBQ3RFO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLHFDQUFxQztFQUNyQyw2QkFBNkI7QUFDL0I7QUFDQTtFQUNFLCtDQUErQztBQUNqRDtBQUNBO0VBQ0UseUJBQXlCO0FBQzNCO0FBQ0E7RUFDRSxrQ0FBa0M7QUFDcEM7QUFDQTtFQUNFLG9DQUFvQztBQUN0Qzs7QUFFQTtFQUNFLDRCQUE0QjtBQUM5QjtBQUNBO0VBQ0UsZUFBZTtFQUNmLGlCQUFpQjtFQUNqQiw2QkFBNkI7RUFDN0IsdUNBQXVDO0FBQ3pDO0FBQ0E7RUFDRSxlQUFlO0VBQ2YsaUJBQWlCO0VBQ2pCLGlDQUFpQztFQUNqQyxpQkFBaUI7QUFDbkI7QUFDQTtFQUNFLHVCQUF1QjtBQUN6QjtBQUNBO0VBQ0UsOEJBQThCO0FBQ2hDO0FBQ0E7RUFDRSw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSxjQUFjO0FBQ2hCO0FBQ0E7RUFDRSxjQUFjO0VBQ2QsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixtQkFBbUI7RUFDbkIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsdUJBQXVCLEVBQUUseUJBQXlCO0FBQ3BEO0FBQ0E7RUFDRSxrQkFBa0I7RUFDbEIsUUFBUTtFQUNSLFNBQVM7RUFDVCxnQ0FBZ0M7RUFDaEMsb0JBQW9CO0FBQ3RCIiwiZmlsZSI6Im5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9idXR0b24vYnV0dG9uLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b24ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHotaW5kZXg6IHZhcigtLXotaW5kZXgtMSk7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbn1cbi5idXR0b24gYnV0dG9uIHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBoZWlnaHQ6IDMycHg7XG4gIGNvbG9yOiBjdXJyZW50Q29sb3I7XG4gIGJvcmRlci1yYWRpdXM6IHZhcigtLWJvcmRlci1yYWRpdXMtNik7XG59XG5cbi5kaXNhYmxlZCB7XG4gIG9wYWNpdHk6IHZhcigtLW9wYWNpdHktMzApO1xufVxuLmRpc2FibGVkIGJ1dHRvbiB7XG4gIGN1cnNvcjogbm90LWFsbG93ZWQ7XG59XG5cbi5wcmltYXJ5IHtcbiAgY29sb3I6IHZhcihcbiAgICAtLWNvbG9yLXdoaXRlXG4gICk7IC8qIFNldCB0aGUgY29sb3Igb2YgdGhlIGBidXR0b25gIGVsZW1lbnQgYW5kIGBMb2FkaW5nSW5kaWNhdG9yYCAqL1xufVxuLnByaW1hcnkgYnV0dG9uIHtcbiAgcGFkZGluZzogMCAxNHB4O1xuICBsaW5lLWhlaWdodDogMjhweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tY29sb3ItYWNjZW50KTtcbiAgYm9yZGVyOiAycHggc29saWQgdHJhbnNwYXJlbnQ7XG59XG4ucHJpbWFyeTpub3QoLmRpc2FibGVkKSBidXR0b246Zm9jdXMge1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLWJsYWNrLTMwLXRyYW5zbHVjZW50KTtcbn1cbi5wcmltYXJ5LmRlc3RydWN0aXZlIHtcbiAgY29sb3I6IHZhcigtLWNvbG9yLXdoaXRlKTtcbn1cbi5wcmltYXJ5LmRlc3RydWN0aXZlIGJ1dHRvbiB7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWNvbG9yLXJlZCk7XG59XG4ucHJpbWFyeS5kaXNhYmxlZCBidXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1jb2xvci1ibGFjayk7XG59XG5cbi5zZWNvbmRhcnkge1xuICBjb2xvcjogdmFyKC0tY29sb3ItYmxhY2stODApO1xufVxuLnNlY29uZGFyeSBidXR0b24ge1xuICBwYWRkaW5nOiAwIDE1cHg7XG4gIGxpbmUtaGVpZ2h0OiAzMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDtcbiAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tY29sb3ItYmxhY2stODApO1xufVxuLnNlY29uZGFyeTpub3QoLmRpc2FibGVkKSBidXR0b246Zm9jdXMge1xuICBwYWRkaW5nOiAwIDE0cHg7XG4gIGxpbmUtaGVpZ2h0OiAyOHB4O1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLWFjY2VudCk7XG4gIGJvcmRlci13aWR0aDogMnB4O1xufVxuLnNlY29uZGFyeS5kZXN0cnVjdGl2ZSB7XG4gIGNvbG9yOiB2YXIoLS1jb2xvci1yZWQpO1xufVxuLnNlY29uZGFyeS5kZXN0cnVjdGl2ZSBidXR0b24ge1xuICBib3JkZXItY29sb3I6IHZhcigtLWNvbG9yLXJlZCk7XG59XG4uc2Vjb25kYXJ5LmRlc3RydWN0aXZlOm5vdCguZGlzYWJsZWQpIGJ1dHRvbjpmb2N1cyB7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tY29sb3ItcmVkKTtcbn1cblxuLmZ1bGxXaWR0aCB7XG4gIGRpc3BsYXk6IGJsb2NrO1xufVxuLmZ1bGxXaWR0aCBidXR0b24ge1xuICBkaXNwbGF5OiBibG9jaztcbiAgd2lkdGg6IDEwMCU7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIHdoaXRlLXNwYWNlOiBub3dyYXA7XG4gIHRleHQtb3ZlcmZsb3c6IGVsbGlwc2lzO1xufVxuXG4ubG9hZGluZyBidXR0b24ge1xuICBjb2xvcjogcmdiYSgwLCAwLCAwLCAwKTsgLyogSGlkZSB0aGUgYnV0dG9uIHRleHQgKi9cbn1cbi5sb2FkaW5nSW5kaWNhdG9yIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0b3A6IDUwJTtcbiAgbGVmdDogNTAlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgcG9pbnRlci1ldmVudHM6IG5vbmU7XG59XG4iXX0= */`;
-        document.head.append(element);
-      }
-      button_default = { "button": "_button_12lb8_1", "disabled": "_disabled_12lb8_13", "primary": "_primary_12lb8_20", "destructive": "_destructive_12lb8_34", "secondary": "_secondary_12lb8_44", "fullWidth": "_fullWidth_12lb8_69", "loading": "_loading_12lb8_80", "loadingIndicator": "_loadingIndicator_12lb8_83" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/button/button.js
-  function Button(_a) {
-    var _b = _a, { children, destructive = false, disabled = false, fullWidth = false, loading = false, onClick, propagateEscapeKeyDown = true, secondary = false } = _b, rest = __objRest(_b, ["children", "destructive", "disabled", "fullWidth", "loading", "onClick", "propagateEscapeKeyDown", "secondary"]);
-    const handleKeyDown = F(function(event) {
-      if (event.key === "Escape") {
-        if (propagateEscapeKeyDown === false) {
-          event.stopPropagation();
-        }
-        event.currentTarget.blur();
-        return;
-      }
-      if (event.key === "Enter") {
-        event.stopPropagation();
-      }
-    }, [propagateEscapeKeyDown]);
-    return v("div", { class: createClassName([
-      button_default.button,
-      secondary === true ? button_default.secondary : button_default.primary,
-      destructive === true ? button_default.destructive : null,
-      fullWidth === true ? button_default.fullWidth : null,
-      disabled === true ? button_default.disabled : null,
-      loading === true ? button_default.loading : null
-    ]) }, loading === true ? v("div", { class: button_default.loadingIndicator }, v(LoadingIndicator, null)) : null, v("button", __spreadProps(__spreadValues({}, rest), { disabled: disabled === true, onClick: disabled === true || loading === true ? void 0 : onClick, onKeyDown: disabled === true || loading === true ? void 0 : handleKeyDown, tabIndex: disabled === true ? -1 : 0 }), children));
-  }
-  var init_button2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/button/button.js"() {
-      init_preact_module();
-      init_hooks_module();
-      init_create_class_name();
-      init_loading_indicator2();
-      init_button();
-    }
-  });
-
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/9d338cd0-551f-4600-8ef2-3d48fc65be9e/container.js
-  var container_default;
-  var init_container = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/9d338cd0-551f-4600-8ef2-3d48fc65be9e/container.js"() {
-      if (document.getElementById("473e313664") === null) {
-        const element = document.createElement("style");
-        element.id = "473e313664";
-        element.textContent = `._extraSmall_kslv9_1 {
-  padding: 0 var(--space-extra-small);
-}
-
-._small_kslv9_5 {
-  padding: 0 var(--space-small);
-}
-
-._medium_kslv9_9 {
-  padding: 0 var(--space-medium);
-}
-
-._large_kslv9_13 {
-  padding: 0 var(--space-large);
-}
-
-._extraLarge_kslv9_17 {
-  padding: 0 var(--space-extra-large);
-}
-
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm5vZGVfbW9kdWxlcy9AY3JlYXRlLWZpZ21hLXBsdWdpbi91aS9saWIvY29tcG9uZW50cy9sYXlvdXQvY29udGFpbmVyL2NvbnRhaW5lci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQ0FBbUM7QUFDckM7O0FBRUE7RUFDRSw2QkFBNkI7QUFDL0I7O0FBRUE7RUFDRSw4QkFBOEI7QUFDaEM7O0FBRUE7RUFDRSw2QkFBNkI7QUFDL0I7O0FBRUE7RUFDRSxtQ0FBbUM7QUFDckMiLCJmaWxlIjoibm9kZV9tb2R1bGVzL0BjcmVhdGUtZmlnbWEtcGx1Z2luL3VpL2xpYi9jb21wb25lbnRzL2xheW91dC9jb250YWluZXIvY29udGFpbmVyLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5leHRyYVNtYWxsIHtcbiAgcGFkZGluZzogMCB2YXIoLS1zcGFjZS1leHRyYS1zbWFsbCk7XG59XG5cbi5zbWFsbCB7XG4gIHBhZGRpbmc6IDAgdmFyKC0tc3BhY2Utc21hbGwpO1xufVxuXG4ubWVkaXVtIHtcbiAgcGFkZGluZzogMCB2YXIoLS1zcGFjZS1tZWRpdW0pO1xufVxuXG4ubGFyZ2Uge1xuICBwYWRkaW5nOiAwIHZhcigtLXNwYWNlLWxhcmdlKTtcbn1cblxuLmV4dHJhTGFyZ2Uge1xuICBwYWRkaW5nOiAwIHZhcigtLXNwYWNlLWV4dHJhLWxhcmdlKTtcbn1cbiJdfQ== */`;
-        document.head.append(element);
-      }
-      container_default = { "extraSmall": "_extraSmall_kslv9_1", "small": "_small_kslv9_5", "medium": "_medium_kslv9_9", "large": "_large_kslv9_13", "extraLarge": "_extraLarge_kslv9_17" };
-    }
-  });
-
-  // node_modules/@create-figma-plugin/ui/lib/components/layout/container/container.js
-  function Container(_a) {
-    var _b = _a, { space = "small" } = _b, rest = __objRest(_b, ["space"]);
-    return v("div", __spreadProps(__spreadValues({}, rest), { class: container_default[space] }));
-  }
-  var init_container2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/components/layout/container/container.js"() {
-      init_preact_module();
-      init_container();
-    }
-  });
-
-  // node_modules/@create-figma-plugin/utilities/lib/events.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/events.js
   function invokeEventHandler(name, args) {
     for (const id in eventHandlers) {
       if (eventHandlers[id].name === name) {
@@ -788,7 +501,7 @@
   }
   var eventHandlers, emit;
   var init_events = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/events.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/events.js"() {
       eventHandlers = {};
       emit = typeof window === "undefined" ? function(name, ...args) {
         figma.ui.postMessage([name, ...args]);
@@ -810,19 +523,19 @@
     }
   });
 
-  // node_modules/@create-figma-plugin/utilities/lib/index.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/index.js
   var init_lib = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/index.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/index.js"() {
       init_events();
     }
   });
 
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/26c26783-0d47-42ce-9194-17208eb92321/base.js
+  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/1ba46b51-8dbc-4218-8cae-b98c72dbc7f1/base.js
   var init_base = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/26c26783-0d47-42ce-9194-17208eb92321/base.js"() {
-      if (document.getElementById("c24b8a19d2") === null) {
+    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/1ba46b51-8dbc-4218-8cae-b98c72dbc7f1/base.js"() {
+      if (document.getElementById("754c5544f8") === null) {
         const element = document.createElement("style");
-        element.id = "c24b8a19d2";
+        element.id = "754c5544f8";
         element.textContent = `@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
 
 :root {
@@ -961,31 +674,788 @@ svg {
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/utilities/render.js
+  // ../../node_modules/@create-figma-plugin/ui/lib/utilities/render.js
   function render(Plugin2) {
     return function(rootNode2, props) {
       S(v(Plugin2, __spreadValues({}, props)), rootNode2);
     };
   }
   var init_render = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/utilities/render.js"() {
+    "../../node_modules/@create-figma-plugin/ui/lib/utilities/render.js"() {
       init_base();
       init_preact_module();
     }
   });
 
-  // node_modules/@create-figma-plugin/ui/lib/index.js
+  // ../../node_modules/@create-figma-plugin/ui/lib/index.js
   var init_lib2 = __esm({
-    "node_modules/@create-figma-plugin/ui/lib/index.js"() {
-      init_button2();
-      init_container2();
+    "../../node_modules/@create-figma-plugin/ui/lib/index.js"() {
       init_render();
     }
   });
 
-  // node_modules/prismjs/prism.js
+  // ../../node_modules/preact/compat/dist/compat.module.js
+  var compat_module_exports = {};
+  __export(compat_module_exports, {
+    Children: () => k3,
+    Component: () => _,
+    Fragment: () => d,
+    PureComponent: () => E,
+    StrictMode: () => fn,
+    Suspense: () => L2,
+    SuspenseList: () => M2,
+    __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: () => X,
+    cloneElement: () => rn,
+    createContext: () => D,
+    createElement: () => v,
+    createFactory: () => tn,
+    createPortal: () => W,
+    createRef: () => p,
+    default: () => compat_module_default,
+    findDOMNode: () => on2,
+    flushSync: () => cn,
+    forwardRef: () => x3,
+    hydrate: () => H2,
+    isValidElement: () => en,
+    lazy: () => F2,
+    memo: () => g3,
+    render: () => B2,
+    unmountComponentAtNode: () => un,
+    unstable_batchedUpdates: () => ln,
+    useCallback: () => F,
+    useContext: () => T2,
+    useDebugValue: () => d2,
+    useEffect: () => y2,
+    useErrorBoundary: () => q2,
+    useImperativeHandle: () => _2,
+    useLayoutEffect: () => h2,
+    useMemo: () => A2,
+    useReducer: () => p2,
+    useRef: () => s2,
+    useState: () => l2,
+    version: () => nn
+  });
+  function S2(n2, t3) {
+    for (var e3 in t3)
+      n2[e3] = t3[e3];
+    return n2;
+  }
+  function C2(n2, t3) {
+    for (var e3 in n2)
+      if (e3 !== "__source" && !(e3 in t3))
+        return true;
+    for (var r3 in t3)
+      if (r3 !== "__source" && n2[r3] !== t3[r3])
+        return true;
+    return false;
+  }
+  function E(n2) {
+    this.props = n2;
+  }
+  function g3(n2, t3) {
+    function e3(n3) {
+      var e4 = this.props.ref, r4 = e4 == n3.ref;
+      return !r4 && e4 && (e4.call ? e4(null) : e4.current = null), t3 ? !t3(this.props, n3) || !r4 : C2(this.props, n3);
+    }
+    function r3(t4) {
+      return this.shouldComponentUpdate = e3, v(n2, t4);
+    }
+    return r3.displayName = "Memo(" + (n2.displayName || n2.name) + ")", r3.prototype.isReactComponent = true, r3.__f = true, r3;
+  }
+  function x3(n2) {
+    function t3(t4, e3) {
+      var r3 = S2({}, t4);
+      return delete r3.ref, n2(r3, (e3 = t4.ref || e3) && (typeof e3 != "object" || "current" in e3) ? e3 : null);
+    }
+    return t3.$$typeof = R, t3.render = t3, t3.prototype.isReactComponent = t3.__f = true, t3.displayName = "ForwardRef(" + (n2.displayName || n2.name) + ")", t3;
+  }
+  function L2() {
+    this.__u = 0, this.t = null, this.__b = null;
+  }
+  function U(n2) {
+    var t3 = n2.__.__c;
+    return t3 && t3.__e && t3.__e(n2);
+  }
+  function F2(n2) {
+    var t3, e3, r3;
+    function u3(u4) {
+      if (t3 || (t3 = n2()).then(function(n3) {
+        e3 = n3.default || n3;
+      }, function(n3) {
+        r3 = n3;
+      }), r3)
+        throw r3;
+      if (!e3)
+        throw t3;
+      return v(e3, u4);
+    }
+    return u3.displayName = "Lazy", u3.__f = true, u3;
+  }
+  function M2() {
+    this.u = null, this.o = null;
+  }
+  function D2(n2) {
+    return this.getChildContext = function() {
+      return n2.context;
+    }, n2.children;
+  }
+  function I2(n2) {
+    var t3 = this, e3 = n2.i;
+    t3.componentWillUnmount = function() {
+      S(null, t3.l), t3.l = null, t3.i = null;
+    }, t3.i && t3.i !== e3 && t3.componentWillUnmount(), n2.__v ? (t3.l || (t3.i = e3, t3.l = { nodeType: 1, parentNode: e3, childNodes: [], appendChild: function(n3) {
+      this.childNodes.push(n3), t3.i.appendChild(n3);
+    }, insertBefore: function(n3, e4) {
+      this.childNodes.push(n3), t3.i.appendChild(n3);
+    }, removeChild: function(n3) {
+      this.childNodes.splice(this.childNodes.indexOf(n3) >>> 1, 1), t3.i.removeChild(n3);
+    } }), S(v(D2, { context: t3.context }, n2.__v), t3.l)) : t3.l && t3.componentWillUnmount();
+  }
+  function W(n2, t3) {
+    return v(I2, { __v: n2, i: t3 });
+  }
+  function B2(n2, t3, e3) {
+    return t3.__k == null && (t3.textContent = ""), S(n2, t3), typeof e3 == "function" && e3(), n2 ? n2.__c : null;
+  }
+  function H2(n2, t3, e3) {
+    return q(n2, t3), typeof e3 == "function" && e3(), n2 ? n2.__c : null;
+  }
+  function Y() {
+  }
+  function $2() {
+    return this.cancelBubble;
+  }
+  function q3() {
+    return this.defaultPrevented;
+  }
+  function tn(n2) {
+    return v.bind(null, n2);
+  }
+  function en(n2) {
+    return !!n2 && n2.$$typeof === j3;
+  }
+  function rn(n2) {
+    return en(n2) ? B.apply(null, arguments) : n2;
+  }
+  function un(n2) {
+    return !!n2.__k && (S(null, n2), true);
+  }
+  function on2(n2) {
+    return n2 && (n2.base || n2.nodeType === 1 && n2) || null;
+  }
+  var w3, R, N2, k3, A3, O2, T3, j3, P2, V, z2, Z, G, J, K, Q, X, nn, ln, cn, fn, compat_module_default;
+  var init_compat_module = __esm({
+    "../../node_modules/preact/compat/dist/compat.module.js"() {
+      init_hooks_module();
+      init_hooks_module();
+      init_preact_module();
+      init_preact_module();
+      (E.prototype = new _()).isPureReactComponent = true, E.prototype.shouldComponentUpdate = function(n2, t3) {
+        return C2(this.props, n2) || C2(this.state, t3);
+      };
+      w3 = l.__b;
+      l.__b = function(n2) {
+        n2.type && n2.type.__f && n2.ref && (n2.props.ref = n2.ref, n2.ref = null), w3 && w3(n2);
+      };
+      R = typeof Symbol != "undefined" && Symbol.for && Symbol.for("react.forward_ref") || 3911;
+      N2 = function(n2, t3) {
+        return n2 == null ? null : A(A(n2).map(t3));
+      };
+      k3 = { map: N2, forEach: N2, count: function(n2) {
+        return n2 ? A(n2).length : 0;
+      }, only: function(n2) {
+        var t3 = A(n2);
+        if (t3.length !== 1)
+          throw "Children.only";
+        return t3[0];
+      }, toArray: A };
+      A3 = l.__e;
+      l.__e = function(n2, t3, e3) {
+        if (n2.then) {
+          for (var r3, u3 = t3; u3 = u3.__; )
+            if ((r3 = u3.__c) && r3.__c)
+              return t3.__e == null && (t3.__e = e3.__e, t3.__k = e3.__k), r3.__c(n2, t3);
+        }
+        A3(n2, t3, e3);
+      };
+      O2 = l.unmount;
+      l.unmount = function(n2) {
+        var t3 = n2.__c;
+        t3 && t3.__R && t3.__R(), t3 && n2.__h === true && (n2.type = null), O2 && O2(n2);
+      }, (L2.prototype = new _()).__c = function(n2, t3) {
+        var e3 = t3.__c, r3 = this;
+        r3.t == null && (r3.t = []), r3.t.push(e3);
+        var u3 = U(r3.__v), o3 = false, i3 = function() {
+          o3 || (o3 = true, e3.__R = null, u3 ? u3(l3) : l3());
+        };
+        e3.__R = i3;
+        var l3 = function() {
+          if (!--r3.__u) {
+            if (r3.state.__e) {
+              var n3 = r3.state.__e;
+              r3.__v.__k[0] = function n4(t5, e4, r4) {
+                return t5 && (t5.__v = null, t5.__k = t5.__k && t5.__k.map(function(t6) {
+                  return n4(t6, e4, r4);
+                }), t5.__c && t5.__c.__P === e4 && (t5.__e && r4.insertBefore(t5.__e, t5.__d), t5.__c.__e = true, t5.__c.__P = r4)), t5;
+              }(n3, n3.__c.__P, n3.__c.__O);
+            }
+            var t4;
+            for (r3.setState({ __e: r3.__b = null }); t4 = r3.t.pop(); )
+              t4.forceUpdate();
+          }
+        }, c3 = t3.__h === true;
+        r3.__u++ || c3 || r3.setState({ __e: r3.__b = r3.__v.__k[0] }), n2.then(i3, i3);
+      }, L2.prototype.componentWillUnmount = function() {
+        this.t = [];
+      }, L2.prototype.render = function(n2, t3) {
+        if (this.__b) {
+          if (this.__v.__k) {
+            var e3 = document.createElement("div"), r3 = this.__v.__k[0].__c;
+            this.__v.__k[0] = function n3(t4, e4, r4) {
+              return t4 && (t4.__c && t4.__c.__H && (t4.__c.__H.__.forEach(function(n4) {
+                typeof n4.__c == "function" && n4.__c();
+              }), t4.__c.__H = null), (t4 = S2({}, t4)).__c != null && (t4.__c.__P === r4 && (t4.__c.__P = e4), t4.__c = null), t4.__k = t4.__k && t4.__k.map(function(t5) {
+                return n3(t5, e4, r4);
+              })), t4;
+            }(this.__b, e3, r3.__O = r3.__P);
+          }
+          this.__b = null;
+        }
+        var u3 = t3.__e && v(d, null, n2.fallback);
+        return u3 && (u3.__h = null), [v(d, null, t3.__e ? null : n2.children), u3];
+      };
+      T3 = function(n2, t3, e3) {
+        if (++e3[1] === e3[0] && n2.o.delete(t3), n2.props.revealOrder && (n2.props.revealOrder[0] !== "t" || !n2.o.size))
+          for (e3 = n2.u; e3; ) {
+            for (; e3.length > 3; )
+              e3.pop()();
+            if (e3[1] < e3[0])
+              break;
+            n2.u = e3 = e3[2];
+          }
+      };
+      (M2.prototype = new _()).__e = function(n2) {
+        var t3 = this, e3 = U(t3.__v), r3 = t3.o.get(n2);
+        return r3[0]++, function(u3) {
+          var o3 = function() {
+            t3.props.revealOrder ? (r3.push(u3), T3(t3, n2, r3)) : u3();
+          };
+          e3 ? e3(o3) : o3();
+        };
+      }, M2.prototype.render = function(n2) {
+        this.u = null, this.o = new Map();
+        var t3 = A(n2.children);
+        n2.revealOrder && n2.revealOrder[0] === "b" && t3.reverse();
+        for (var e3 = t3.length; e3--; )
+          this.o.set(t3[e3], this.u = [1, 0, this.u]);
+        return n2.children;
+      }, M2.prototype.componentDidUpdate = M2.prototype.componentDidMount = function() {
+        var n2 = this;
+        this.o.forEach(function(t3, e3) {
+          T3(n2, e3, t3);
+        });
+      };
+      j3 = typeof Symbol != "undefined" && Symbol.for && Symbol.for("react.element") || 60103;
+      P2 = /^(?:accent|alignment|arabic|baseline|cap|clip(?!PathU)|color|dominant|fill|flood|font|glyph(?!R)|horiz|marker(?!H|W|U)|overline|paint|stop|strikethrough|stroke|text(?!L)|underline|unicode|units|v|vector|vert|word|writing|x(?!C))[A-Z]/;
+      V = typeof document != "undefined";
+      z2 = function(n2) {
+        return (typeof Symbol != "undefined" && typeof Symbol() == "symbol" ? /fil|che|rad/i : /fil|che|ra/i).test(n2);
+      };
+      _.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(n2) {
+        Object.defineProperty(_.prototype, n2, { configurable: true, get: function() {
+          return this["UNSAFE_" + n2];
+        }, set: function(t3) {
+          Object.defineProperty(this, n2, { configurable: true, writable: true, value: t3 });
+        } });
+      });
+      Z = l.event;
+      l.event = function(n2) {
+        return Z && (n2 = Z(n2)), n2.persist = Y, n2.isPropagationStopped = $2, n2.isDefaultPrevented = q3, n2.nativeEvent = n2;
+      };
+      J = { configurable: true, get: function() {
+        return this.class;
+      } };
+      K = l.vnode;
+      l.vnode = function(n2) {
+        var t3 = n2.type, e3 = n2.props, r3 = e3;
+        if (typeof t3 == "string") {
+          var u3 = t3.indexOf("-") === -1;
+          for (var o3 in r3 = {}, e3) {
+            var i3 = e3[o3];
+            V && o3 === "children" && t3 === "noscript" || o3 === "value" && "defaultValue" in e3 && i3 == null || (o3 === "defaultValue" && "value" in e3 && e3.value == null ? o3 = "value" : o3 === "download" && i3 === true ? i3 = "" : /ondoubleclick/i.test(o3) ? o3 = "ondblclick" : /^onchange(textarea|input)/i.test(o3 + t3) && !z2(e3.type) ? o3 = "oninput" : /^on(Ani|Tra|Tou|BeforeInp)/.test(o3) ? o3 = o3.toLowerCase() : u3 && P2.test(o3) ? o3 = o3.replace(/[A-Z0-9]/, "-$&").toLowerCase() : i3 === null && (i3 = void 0), r3[o3] = i3);
+          }
+          t3 == "select" && r3.multiple && Array.isArray(r3.value) && (r3.value = A(e3.children).forEach(function(n3) {
+            n3.props.selected = r3.value.indexOf(n3.props.value) != -1;
+          })), t3 == "select" && r3.defaultValue != null && (r3.value = A(e3.children).forEach(function(n3) {
+            n3.props.selected = r3.multiple ? r3.defaultValue.indexOf(n3.props.value) != -1 : r3.defaultValue == n3.props.value;
+          })), n2.props = r3;
+        }
+        t3 && e3.class != e3.className && (J.enumerable = "className" in e3, e3.className != null && (r3.class = e3.className), Object.defineProperty(r3, "className", J)), n2.$$typeof = j3, K && K(n2);
+      };
+      Q = l.__r;
+      l.__r = function(n2) {
+        Q && Q(n2), G = n2.__c;
+      };
+      X = { ReactCurrentDispatcher: { current: { readContext: function(n2) {
+        return G.__n[n2.__c].props.value;
+      } } } };
+      nn = "17.0.2";
+      ln = function(n2, t3) {
+        return n2(t3);
+      };
+      cn = function(n2, t3) {
+        return n2(t3);
+      };
+      fn = d;
+      compat_module_default = { useState: l2, useReducer: p2, useEffect: y2, useLayoutEffect: h2, useRef: s2, useImperativeHandle: _2, useMemo: A2, useCallback: F, useContext: T2, useDebugValue: d2, version: "17.0.2", Children: k3, render: B2, hydrate: H2, unmountComponentAtNode: un, createPortal: W, createElement: v, createContext: D, createFactory: tn, cloneElement: rn, createRef: p, Fragment: d, isValidElement: en, findDOMNode: on2, Component: _, PureComponent: E, memo: g3, forwardRef: x3, flushSync: cn, unstable_batchedUpdates: ln, StrictMode: d, Suspense: L2, SuspenseList: M2, lazy: F2, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: X };
+    }
+  });
+
+  // ../../node_modules/react-simple-code-editor/lib/index.js
+  var require_lib = __commonJS({
+    "../../node_modules/react-simple-code-editor/lib/index.js"(exports) {
+      "use strict";
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+      var _extends = Object.assign || function(target) {
+        for (var i3 = 1; i3 < arguments.length; i3++) {
+          var source = arguments[i3];
+          for (var key in source) {
+            if (Object.prototype.hasOwnProperty.call(source, key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      };
+      var _createClass = function() {
+        function defineProperties(target, props) {
+          for (var i3 = 0; i3 < props.length; i3++) {
+            var descriptor = props[i3];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor)
+              descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }
+        return function(Constructor, protoProps, staticProps) {
+          if (protoProps)
+            defineProperties(Constructor.prototype, protoProps);
+          if (staticProps)
+            defineProperties(Constructor, staticProps);
+          return Constructor;
+        };
+      }();
+      var _react = (init_compat_module(), compat_module_exports);
+      var React = _interopRequireWildcard(_react);
+      function _interopRequireWildcard(obj) {
+        if (obj && obj.__esModule) {
+          return obj;
+        } else {
+          var newObj = {};
+          if (obj != null) {
+            for (var key in obj) {
+              if (Object.prototype.hasOwnProperty.call(obj, key))
+                newObj[key] = obj[key];
+            }
+          }
+          newObj.default = obj;
+          return newObj;
+        }
+      }
+      function _objectWithoutProperties(obj, keys) {
+        var target = {};
+        for (var i3 in obj) {
+          if (keys.indexOf(i3) >= 0)
+            continue;
+          if (!Object.prototype.hasOwnProperty.call(obj, i3))
+            continue;
+          target[i3] = obj[i3];
+        }
+        return target;
+      }
+      function _classCallCheck(instance, Constructor) {
+        if (!(instance instanceof Constructor)) {
+          throw new TypeError("Cannot call a class as a function");
+        }
+      }
+      function _possibleConstructorReturn(self2, call) {
+        if (!self2) {
+          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        }
+        return call && (typeof call === "object" || typeof call === "function") ? call : self2;
+      }
+      function _inherits(subClass, superClass) {
+        if (typeof superClass !== "function" && superClass !== null) {
+          throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
+        }
+        subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });
+        if (superClass)
+          Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+      }
+      var KEYCODE_ENTER = 13;
+      var KEYCODE_TAB = 9;
+      var KEYCODE_BACKSPACE = 8;
+      var KEYCODE_Y = 89;
+      var KEYCODE_Z = 90;
+      var KEYCODE_M = 77;
+      var KEYCODE_PARENS = 57;
+      var KEYCODE_BRACKETS = 219;
+      var KEYCODE_QUOTE = 222;
+      var KEYCODE_BACK_QUOTE = 192;
+      var KEYCODE_ESCAPE = 27;
+      var HISTORY_LIMIT = 100;
+      var HISTORY_TIME_GAP = 3e3;
+      var isWindows = "navigator" in window && /Win/i.test(navigator.platform);
+      var isMacLike = "navigator" in window && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+      var className = "npm__react-simple-code-editor__textarea";
+      var cssText = "\n/**\n * Reset the text fill color so that placeholder is visible\n */\n." + className + ":empty {\n  -webkit-text-fill-color: inherit !important;\n}\n\n/**\n * Hack to apply on some CSS on IE10 and IE11\n */\n@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n  /**\n    * IE doesn't support '-webkit-text-fill-color'\n    * So we use 'color: transparent' to make the text transparent on IE\n    * Unlike other browsers, it doesn't affect caret color in IE\n    */\n  ." + className + " {\n    color: transparent !important;\n  }\n\n  ." + className + "::selection {\n    background-color: #accef7 !important;\n    color: transparent !important;\n  }\n}\n";
+      var Editor2 = function(_React$Component) {
+        _inherits(Editor3, _React$Component);
+        function Editor3() {
+          var _ref;
+          var _temp, _this, _ret;
+          _classCallCheck(this, Editor3);
+          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+          }
+          return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Editor3.__proto__ || Object.getPrototypeOf(Editor3)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            capture: true
+          }, _this._recordCurrentState = function() {
+            var input = _this._input;
+            if (!input)
+              return;
+            var value = input.value, selectionStart = input.selectionStart, selectionEnd = input.selectionEnd;
+            _this._recordChange({
+              value,
+              selectionStart,
+              selectionEnd
+            });
+          }, _this._getLines = function(text, position) {
+            return text.substring(0, position).split("\n");
+          }, _this._recordChange = function(record) {
+            var overwrite = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
+            var _this$_history = _this._history, stack = _this$_history.stack, offset = _this$_history.offset;
+            if (stack.length && offset > -1) {
+              _this._history.stack = stack.slice(0, offset + 1);
+              var count = _this._history.stack.length;
+              if (count > HISTORY_LIMIT) {
+                var extras = count - HISTORY_LIMIT;
+                _this._history.stack = stack.slice(extras, count);
+                _this._history.offset = Math.max(_this._history.offset - extras, 0);
+              }
+            }
+            var timestamp = Date.now();
+            if (overwrite) {
+              var last = _this._history.stack[_this._history.offset];
+              if (last && timestamp - last.timestamp < HISTORY_TIME_GAP) {
+                var re = /[^a-z0-9]([a-z0-9]+)$/i;
+                var previous = _this._getLines(last.value, last.selectionStart).pop().match(re);
+                var current = _this._getLines(record.value, record.selectionStart).pop().match(re);
+                if (previous && current && current[1].startsWith(previous[1])) {
+                  _this._history.stack[_this._history.offset] = _extends({}, record, { timestamp });
+                  return;
+                }
+              }
+            }
+            _this._history.stack.push(_extends({}, record, { timestamp }));
+            _this._history.offset++;
+          }, _this._updateInput = function(record) {
+            var input = _this._input;
+            if (!input)
+              return;
+            input.value = record.value;
+            input.selectionStart = record.selectionStart;
+            input.selectionEnd = record.selectionEnd;
+            _this.props.onValueChange(record.value);
+          }, _this._applyEdits = function(record) {
+            var input = _this._input;
+            var last = _this._history.stack[_this._history.offset];
+            if (last && input) {
+              _this._history.stack[_this._history.offset] = _extends({}, last, {
+                selectionStart: input.selectionStart,
+                selectionEnd: input.selectionEnd
+              });
+            }
+            _this._recordChange(record);
+            _this._updateInput(record);
+          }, _this._undoEdit = function() {
+            var _this$_history2 = _this._history, stack = _this$_history2.stack, offset = _this$_history2.offset;
+            var record = stack[offset - 1];
+            if (record) {
+              _this._updateInput(record);
+              _this._history.offset = Math.max(offset - 1, 0);
+            }
+          }, _this._redoEdit = function() {
+            var _this$_history3 = _this._history, stack = _this$_history3.stack, offset = _this$_history3.offset;
+            var record = stack[offset + 1];
+            if (record) {
+              _this._updateInput(record);
+              _this._history.offset = Math.min(offset + 1, stack.length - 1);
+            }
+          }, _this._handleKeyDown = function(e3) {
+            var _this$props = _this.props, tabSize = _this$props.tabSize, insertSpaces = _this$props.insertSpaces, ignoreTabKey = _this$props.ignoreTabKey, onKeyDown = _this$props.onKeyDown;
+            if (onKeyDown) {
+              onKeyDown(e3);
+              if (e3.defaultPrevented) {
+                return;
+              }
+            }
+            if (e3.keyCode === KEYCODE_ESCAPE) {
+              e3.target.blur();
+            }
+            var _e$target = e3.target, value = _e$target.value, selectionStart = _e$target.selectionStart, selectionEnd = _e$target.selectionEnd;
+            var tabCharacter = (insertSpaces ? " " : "	").repeat(tabSize);
+            if (e3.keyCode === KEYCODE_TAB && !ignoreTabKey && _this.state.capture) {
+              e3.preventDefault();
+              if (e3.shiftKey) {
+                var linesBeforeCaret = _this._getLines(value, selectionStart);
+                var startLine = linesBeforeCaret.length - 1;
+                var endLine = _this._getLines(value, selectionEnd).length - 1;
+                var nextValue = value.split("\n").map(function(line2, i3) {
+                  if (i3 >= startLine && i3 <= endLine && line2.startsWith(tabCharacter)) {
+                    return line2.substring(tabCharacter.length);
+                  }
+                  return line2;
+                }).join("\n");
+                if (value !== nextValue) {
+                  var startLineText = linesBeforeCaret[startLine];
+                  _this._applyEdits({
+                    value: nextValue,
+                    selectionStart: startLineText.startsWith(tabCharacter) ? selectionStart - tabCharacter.length : selectionStart,
+                    selectionEnd: selectionEnd - (value.length - nextValue.length)
+                  });
+                }
+              } else if (selectionStart !== selectionEnd) {
+                var _linesBeforeCaret = _this._getLines(value, selectionStart);
+                var _startLine = _linesBeforeCaret.length - 1;
+                var _endLine = _this._getLines(value, selectionEnd).length - 1;
+                var _startLineText = _linesBeforeCaret[_startLine];
+                _this._applyEdits({
+                  value: value.split("\n").map(function(line2, i3) {
+                    if (i3 >= _startLine && i3 <= _endLine) {
+                      return tabCharacter + line2;
+                    }
+                    return line2;
+                  }).join("\n"),
+                  selectionStart: /\S/.test(_startLineText) ? selectionStart + tabCharacter.length : selectionStart,
+                  selectionEnd: selectionEnd + tabCharacter.length * (_endLine - _startLine + 1)
+                });
+              } else {
+                var updatedSelection = selectionStart + tabCharacter.length;
+                _this._applyEdits({
+                  value: value.substring(0, selectionStart) + tabCharacter + value.substring(selectionEnd),
+                  selectionStart: updatedSelection,
+                  selectionEnd: updatedSelection
+                });
+              }
+            } else if (e3.keyCode === KEYCODE_BACKSPACE) {
+              var hasSelection = selectionStart !== selectionEnd;
+              var textBeforeCaret = value.substring(0, selectionStart);
+              if (textBeforeCaret.endsWith(tabCharacter) && !hasSelection) {
+                e3.preventDefault();
+                var _updatedSelection = selectionStart - tabCharacter.length;
+                _this._applyEdits({
+                  value: value.substring(0, selectionStart - tabCharacter.length) + value.substring(selectionEnd),
+                  selectionStart: _updatedSelection,
+                  selectionEnd: _updatedSelection
+                });
+              }
+            } else if (e3.keyCode === KEYCODE_ENTER) {
+              if (selectionStart === selectionEnd) {
+                var line = _this._getLines(value, selectionStart).pop();
+                var matches = line.match(/^\s+/);
+                if (matches && matches[0]) {
+                  e3.preventDefault();
+                  var indent = "\n" + matches[0];
+                  var _updatedSelection2 = selectionStart + indent.length;
+                  _this._applyEdits({
+                    value: value.substring(0, selectionStart) + indent + value.substring(selectionEnd),
+                    selectionStart: _updatedSelection2,
+                    selectionEnd: _updatedSelection2
+                  });
+                }
+              }
+            } else if (e3.keyCode === KEYCODE_PARENS || e3.keyCode === KEYCODE_BRACKETS || e3.keyCode === KEYCODE_QUOTE || e3.keyCode === KEYCODE_BACK_QUOTE) {
+              var chars = void 0;
+              if (e3.keyCode === KEYCODE_PARENS && e3.shiftKey) {
+                chars = ["(", ")"];
+              } else if (e3.keyCode === KEYCODE_BRACKETS) {
+                if (e3.shiftKey) {
+                  chars = ["{", "}"];
+                } else {
+                  chars = ["[", "]"];
+                }
+              } else if (e3.keyCode === KEYCODE_QUOTE) {
+                if (e3.shiftKey) {
+                  chars = ['"', '"'];
+                } else {
+                  chars = ["'", "'"];
+                }
+              } else if (e3.keyCode === KEYCODE_BACK_QUOTE && !e3.shiftKey) {
+                chars = ["`", "`"];
+              }
+              if (selectionStart !== selectionEnd && chars) {
+                e3.preventDefault();
+                _this._applyEdits({
+                  value: value.substring(0, selectionStart) + chars[0] + value.substring(selectionStart, selectionEnd) + chars[1] + value.substring(selectionEnd),
+                  selectionStart,
+                  selectionEnd: selectionEnd + 2
+                });
+              }
+            } else if ((isMacLike ? e3.metaKey && e3.keyCode === KEYCODE_Z : e3.ctrlKey && e3.keyCode === KEYCODE_Z) && !e3.shiftKey && !e3.altKey) {
+              e3.preventDefault();
+              _this._undoEdit();
+            } else if ((isMacLike ? e3.metaKey && e3.keyCode === KEYCODE_Z && e3.shiftKey : isWindows ? e3.ctrlKey && e3.keyCode === KEYCODE_Y : e3.ctrlKey && e3.keyCode === KEYCODE_Z && e3.shiftKey) && !e3.altKey) {
+              e3.preventDefault();
+              _this._redoEdit();
+            } else if (e3.keyCode === KEYCODE_M && e3.ctrlKey && (isMacLike ? e3.shiftKey : true)) {
+              e3.preventDefault();
+              _this.setState(function(state) {
+                return {
+                  capture: !state.capture
+                };
+              });
+            }
+          }, _this._handleChange = function(e3) {
+            var _e$target2 = e3.target, value = _e$target2.value, selectionStart = _e$target2.selectionStart, selectionEnd = _e$target2.selectionEnd;
+            _this._recordChange({
+              value,
+              selectionStart,
+              selectionEnd
+            }, true);
+            _this.props.onValueChange(value);
+          }, _this._history = {
+            stack: [],
+            offset: -1
+          }, _temp), _possibleConstructorReturn(_this, _ret);
+        }
+        _createClass(Editor3, [{
+          key: "componentDidMount",
+          value: function componentDidMount() {
+            this._recordCurrentState();
+          }
+        }, {
+          key: "render",
+          value: function render2() {
+            var _this2 = this;
+            var _props = this.props, value = _props.value, style = _props.style, padding = _props.padding, highlight2 = _props.highlight, textareaId = _props.textareaId, textareaClassName = _props.textareaClassName, autoFocus = _props.autoFocus, disabled = _props.disabled, form = _props.form, maxLength = _props.maxLength, minLength = _props.minLength, name = _props.name, placeholder = _props.placeholder, readOnly = _props.readOnly, required = _props.required, onClick = _props.onClick, onFocus = _props.onFocus, onBlur = _props.onBlur, onKeyUp = _props.onKeyUp, onKeyDown = _props.onKeyDown, onValueChange = _props.onValueChange, tabSize = _props.tabSize, insertSpaces = _props.insertSpaces, ignoreTabKey = _props.ignoreTabKey, preClassName = _props.preClassName, rest = _objectWithoutProperties(_props, ["value", "style", "padding", "highlight", "textareaId", "textareaClassName", "autoFocus", "disabled", "form", "maxLength", "minLength", "name", "placeholder", "readOnly", "required", "onClick", "onFocus", "onBlur", "onKeyUp", "onKeyDown", "onValueChange", "tabSize", "insertSpaces", "ignoreTabKey", "preClassName"]);
+            var contentStyle = {
+              paddingTop: padding,
+              paddingRight: padding,
+              paddingBottom: padding,
+              paddingLeft: padding
+            };
+            var highlighted = highlight2(value);
+            return React.createElement("div", _extends({}, rest, { style: _extends({}, styles.container, style) }), React.createElement("textarea", {
+              ref: function ref(c3) {
+                return _this2._input = c3;
+              },
+              style: _extends({}, styles.editor, styles.textarea, contentStyle),
+              className: className + (textareaClassName ? " " + textareaClassName : ""),
+              id: textareaId,
+              value,
+              onChange: this._handleChange,
+              onKeyDown: this._handleKeyDown,
+              onClick,
+              onKeyUp,
+              onFocus,
+              onBlur,
+              disabled,
+              form,
+              maxLength,
+              minLength,
+              name,
+              placeholder,
+              readOnly,
+              required,
+              autoFocus,
+              autoCapitalize: "off",
+              autoComplete: "off",
+              autoCorrect: "off",
+              spellCheck: false,
+              "data-gramm": false
+            }), React.createElement("pre", _extends({
+              className: preClassName,
+              "aria-hidden": "true",
+              style: _extends({}, styles.editor, styles.highlight, contentStyle)
+            }, typeof highlighted === "string" ? { dangerouslySetInnerHTML: { __html: highlighted + "<br />" } } : { children: highlighted })), React.createElement("style", { type: "text/css", dangerouslySetInnerHTML: { __html: cssText } }));
+          }
+        }, {
+          key: "session",
+          get: function get() {
+            return {
+              history: this._history
+            };
+          },
+          set: function set(session) {
+            this._history = session.history;
+          }
+        }]);
+        return Editor3;
+      }(React.Component);
+      Editor2.defaultProps = {
+        tabSize: 2,
+        insertSpaces: true,
+        ignoreTabKey: false,
+        padding: 0
+      };
+      exports.default = Editor2;
+      var styles = {
+        container: {
+          position: "relative",
+          textAlign: "left",
+          boxSizing: "border-box",
+          padding: 0,
+          overflow: "hidden"
+        },
+        textarea: {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          height: "100%",
+          width: "100%",
+          resize: "none",
+          color: "inherit",
+          overflow: "hidden",
+          MozOsxFontSmoothing: "grayscale",
+          WebkitFontSmoothing: "antialiased",
+          WebkitTextFillColor: "transparent"
+        },
+        highlight: {
+          position: "relative",
+          pointerEvents: "none"
+        },
+        editor: {
+          margin: 0,
+          border: 0,
+          background: "none",
+          boxSizing: "inherit",
+          display: "inherit",
+          fontFamily: "inherit",
+          fontSize: "inherit",
+          fontStyle: "inherit",
+          fontVariantLigatures: "inherit",
+          fontWeight: "inherit",
+          letterSpacing: "inherit",
+          lineHeight: "inherit",
+          tabSize: "inherit",
+          textIndent: "inherit",
+          textRendering: "inherit",
+          textTransform: "inherit",
+          whiteSpace: "pre-wrap",
+          wordBreak: "keep-all",
+          overflowWrap: "break-word"
+        }
+      };
+    }
+  });
+
+  // ../../node_modules/prismjs/prism.js
   var require_prism = __commonJS({
-    "node_modules/prismjs/prism.js"(exports, module) {
+    "../../node_modules/prismjs/prism.js"(exports, module) {
       var _self = typeof window !== "undefined" ? window : typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope ? self : {};
       var Prism2 = function(_self2) {
         var lang = /\blang(?:uage)?-([\w-]+)\b/i;
@@ -1928,793 +2398,53 @@ svg {
     }
   });
 
-  // node_modules/preact/compat/dist/compat.module.js
-  var compat_module_exports = {};
-  __export(compat_module_exports, {
-    Children: () => k3,
-    Component: () => _,
-    Fragment: () => d,
-    PureComponent: () => E,
-    StrictMode: () => fn,
-    Suspense: () => L2,
-    SuspenseList: () => M2,
-    __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: () => X,
-    cloneElement: () => rn,
-    createContext: () => D,
-    createElement: () => v,
-    createFactory: () => tn,
-    createPortal: () => W,
-    createRef: () => p,
-    default: () => compat_module_default,
-    findDOMNode: () => on2,
-    flushSync: () => cn,
-    forwardRef: () => x3,
-    hydrate: () => H2,
-    isValidElement: () => en,
-    lazy: () => F2,
-    memo: () => g3,
-    render: () => B2,
-    unmountComponentAtNode: () => un,
-    unstable_batchedUpdates: () => ln,
-    useCallback: () => F,
-    useContext: () => T2,
-    useDebugValue: () => d2,
-    useEffect: () => y2,
-    useErrorBoundary: () => q2,
-    useImperativeHandle: () => _2,
-    useLayoutEffect: () => h2,
-    useMemo: () => A2,
-    useReducer: () => p2,
-    useRef: () => s2,
-    useState: () => l2,
-    version: () => nn
-  });
-  function S2(n2, t3) {
-    for (var e3 in t3)
-      n2[e3] = t3[e3];
-    return n2;
-  }
-  function C2(n2, t3) {
-    for (var e3 in n2)
-      if (e3 !== "__source" && !(e3 in t3))
-        return true;
-    for (var r3 in t3)
-      if (r3 !== "__source" && n2[r3] !== t3[r3])
-        return true;
-    return false;
-  }
-  function E(n2) {
-    this.props = n2;
-  }
-  function g3(n2, t3) {
-    function e3(n3) {
-      var e4 = this.props.ref, r4 = e4 == n3.ref;
-      return !r4 && e4 && (e4.call ? e4(null) : e4.current = null), t3 ? !t3(this.props, n3) || !r4 : C2(this.props, n3);
-    }
-    function r3(t4) {
-      return this.shouldComponentUpdate = e3, v(n2, t4);
-    }
-    return r3.displayName = "Memo(" + (n2.displayName || n2.name) + ")", r3.prototype.isReactComponent = true, r3.__f = true, r3;
-  }
-  function x3(n2) {
-    function t3(t4, e3) {
-      var r3 = S2({}, t4);
-      return delete r3.ref, n2(r3, (e3 = t4.ref || e3) && (typeof e3 != "object" || "current" in e3) ? e3 : null);
-    }
-    return t3.$$typeof = R, t3.render = t3, t3.prototype.isReactComponent = t3.__f = true, t3.displayName = "ForwardRef(" + (n2.displayName || n2.name) + ")", t3;
-  }
-  function L2() {
-    this.__u = 0, this.t = null, this.__b = null;
-  }
-  function U(n2) {
-    var t3 = n2.__.__c;
-    return t3 && t3.__e && t3.__e(n2);
-  }
-  function F2(n2) {
-    var t3, e3, r3;
-    function u3(u4) {
-      if (t3 || (t3 = n2()).then(function(n3) {
-        e3 = n3.default || n3;
-      }, function(n3) {
-        r3 = n3;
-      }), r3)
-        throw r3;
-      if (!e3)
-        throw t3;
-      return v(e3, u4);
-    }
-    return u3.displayName = "Lazy", u3.__f = true, u3;
-  }
-  function M2() {
-    this.u = null, this.o = null;
-  }
-  function D2(n2) {
-    return this.getChildContext = function() {
-      return n2.context;
-    }, n2.children;
-  }
-  function I2(n2) {
-    var t3 = this, e3 = n2.i;
-    t3.componentWillUnmount = function() {
-      S(null, t3.l), t3.l = null, t3.i = null;
-    }, t3.i && t3.i !== e3 && t3.componentWillUnmount(), n2.__v ? (t3.l || (t3.i = e3, t3.l = { nodeType: 1, parentNode: e3, childNodes: [], appendChild: function(n3) {
-      this.childNodes.push(n3), t3.i.appendChild(n3);
-    }, insertBefore: function(n3, e4) {
-      this.childNodes.push(n3), t3.i.appendChild(n3);
-    }, removeChild: function(n3) {
-      this.childNodes.splice(this.childNodes.indexOf(n3) >>> 1, 1), t3.i.removeChild(n3);
-    } }), S(v(D2, { context: t3.context }, n2.__v), t3.l)) : t3.l && t3.componentWillUnmount();
-  }
-  function W(n2, t3) {
-    return v(I2, { __v: n2, i: t3 });
-  }
-  function B2(n2, t3, e3) {
-    return t3.__k == null && (t3.textContent = ""), S(n2, t3), typeof e3 == "function" && e3(), n2 ? n2.__c : null;
-  }
-  function H2(n2, t3, e3) {
-    return q(n2, t3), typeof e3 == "function" && e3(), n2 ? n2.__c : null;
-  }
-  function Y() {
-  }
-  function $2() {
-    return this.cancelBubble;
-  }
-  function q3() {
-    return this.defaultPrevented;
-  }
-  function tn(n2) {
-    return v.bind(null, n2);
-  }
-  function en(n2) {
-    return !!n2 && n2.$$typeof === j3;
-  }
-  function rn(n2) {
-    return en(n2) ? B.apply(null, arguments) : n2;
-  }
-  function un(n2) {
-    return !!n2.__k && (S(null, n2), true);
-  }
-  function on2(n2) {
-    return n2 && (n2.base || n2.nodeType === 1 && n2) || null;
-  }
-  var w3, R, N2, k3, A3, O2, T3, j3, P2, V, z2, Z, G, J, K, Q, X, nn, ln, cn, fn, compat_module_default;
-  var init_compat_module = __esm({
-    "node_modules/preact/compat/dist/compat.module.js"() {
-      init_hooks_module();
-      init_hooks_module();
-      init_preact_module();
-      init_preact_module();
-      (E.prototype = new _()).isPureReactComponent = true, E.prototype.shouldComponentUpdate = function(n2, t3) {
-        return C2(this.props, n2) || C2(this.state, t3);
-      };
-      w3 = l.__b;
-      l.__b = function(n2) {
-        n2.type && n2.type.__f && n2.ref && (n2.props.ref = n2.ref, n2.ref = null), w3 && w3(n2);
-      };
-      R = typeof Symbol != "undefined" && Symbol.for && Symbol.for("react.forward_ref") || 3911;
-      N2 = function(n2, t3) {
-        return n2 == null ? null : A(A(n2).map(t3));
-      };
-      k3 = { map: N2, forEach: N2, count: function(n2) {
-        return n2 ? A(n2).length : 0;
-      }, only: function(n2) {
-        var t3 = A(n2);
-        if (t3.length !== 1)
-          throw "Children.only";
-        return t3[0];
-      }, toArray: A };
-      A3 = l.__e;
-      l.__e = function(n2, t3, e3) {
-        if (n2.then) {
-          for (var r3, u3 = t3; u3 = u3.__; )
-            if ((r3 = u3.__c) && r3.__c)
-              return t3.__e == null && (t3.__e = e3.__e, t3.__k = e3.__k), r3.__c(n2, t3);
-        }
-        A3(n2, t3, e3);
-      };
-      O2 = l.unmount;
-      l.unmount = function(n2) {
-        var t3 = n2.__c;
-        t3 && t3.__R && t3.__R(), t3 && n2.__h === true && (n2.type = null), O2 && O2(n2);
-      }, (L2.prototype = new _()).__c = function(n2, t3) {
-        var e3 = t3.__c, r3 = this;
-        r3.t == null && (r3.t = []), r3.t.push(e3);
-        var u3 = U(r3.__v), o3 = false, i3 = function() {
-          o3 || (o3 = true, e3.__R = null, u3 ? u3(l3) : l3());
-        };
-        e3.__R = i3;
-        var l3 = function() {
-          if (!--r3.__u) {
-            if (r3.state.__e) {
-              var n3 = r3.state.__e;
-              r3.__v.__k[0] = function n4(t5, e4, r4) {
-                return t5 && (t5.__v = null, t5.__k = t5.__k && t5.__k.map(function(t6) {
-                  return n4(t6, e4, r4);
-                }), t5.__c && t5.__c.__P === e4 && (t5.__e && r4.insertBefore(t5.__e, t5.__d), t5.__c.__e = true, t5.__c.__P = r4)), t5;
-              }(n3, n3.__c.__P, n3.__c.__O);
-            }
-            var t4;
-            for (r3.setState({ __e: r3.__b = null }); t4 = r3.t.pop(); )
-              t4.forceUpdate();
-          }
-        }, c3 = t3.__h === true;
-        r3.__u++ || c3 || r3.setState({ __e: r3.__b = r3.__v.__k[0] }), n2.then(i3, i3);
-      }, L2.prototype.componentWillUnmount = function() {
-        this.t = [];
-      }, L2.prototype.render = function(n2, t3) {
-        if (this.__b) {
-          if (this.__v.__k) {
-            var e3 = document.createElement("div"), r3 = this.__v.__k[0].__c;
-            this.__v.__k[0] = function n3(t4, e4, r4) {
-              return t4 && (t4.__c && t4.__c.__H && (t4.__c.__H.__.forEach(function(n4) {
-                typeof n4.__c == "function" && n4.__c();
-              }), t4.__c.__H = null), (t4 = S2({}, t4)).__c != null && (t4.__c.__P === r4 && (t4.__c.__P = e4), t4.__c = null), t4.__k = t4.__k && t4.__k.map(function(t5) {
-                return n3(t5, e4, r4);
-              })), t4;
-            }(this.__b, e3, r3.__O = r3.__P);
-          }
-          this.__b = null;
-        }
-        var u3 = t3.__e && v(d, null, n2.fallback);
-        return u3 && (u3.__h = null), [v(d, null, t3.__e ? null : n2.children), u3];
-      };
-      T3 = function(n2, t3, e3) {
-        if (++e3[1] === e3[0] && n2.o.delete(t3), n2.props.revealOrder && (n2.props.revealOrder[0] !== "t" || !n2.o.size))
-          for (e3 = n2.u; e3; ) {
-            for (; e3.length > 3; )
-              e3.pop()();
-            if (e3[1] < e3[0])
-              break;
-            n2.u = e3 = e3[2];
-          }
-      };
-      (M2.prototype = new _()).__e = function(n2) {
-        var t3 = this, e3 = U(t3.__v), r3 = t3.o.get(n2);
-        return r3[0]++, function(u3) {
-          var o3 = function() {
-            t3.props.revealOrder ? (r3.push(u3), T3(t3, n2, r3)) : u3();
-          };
-          e3 ? e3(o3) : o3();
-        };
-      }, M2.prototype.render = function(n2) {
-        this.u = null, this.o = new Map();
-        var t3 = A(n2.children);
-        n2.revealOrder && n2.revealOrder[0] === "b" && t3.reverse();
-        for (var e3 = t3.length; e3--; )
-          this.o.set(t3[e3], this.u = [1, 0, this.u]);
-        return n2.children;
-      }, M2.prototype.componentDidUpdate = M2.prototype.componentDidMount = function() {
-        var n2 = this;
-        this.o.forEach(function(t3, e3) {
-          T3(n2, e3, t3);
-        });
-      };
-      j3 = typeof Symbol != "undefined" && Symbol.for && Symbol.for("react.element") || 60103;
-      P2 = /^(?:accent|alignment|arabic|baseline|cap|clip(?!PathU)|color|dominant|fill|flood|font|glyph(?!R)|horiz|marker(?!H|W|U)|overline|paint|stop|strikethrough|stroke|text(?!L)|underline|unicode|units|v|vector|vert|word|writing|x(?!C))[A-Z]/;
-      V = typeof document != "undefined";
-      z2 = function(n2) {
-        return (typeof Symbol != "undefined" && typeof Symbol() == "symbol" ? /fil|che|rad/i : /fil|che|ra/i).test(n2);
-      };
-      _.prototype.isReactComponent = {}, ["componentWillMount", "componentWillReceiveProps", "componentWillUpdate"].forEach(function(n2) {
-        Object.defineProperty(_.prototype, n2, { configurable: true, get: function() {
-          return this["UNSAFE_" + n2];
-        }, set: function(t3) {
-          Object.defineProperty(this, n2, { configurable: true, writable: true, value: t3 });
-        } });
-      });
-      Z = l.event;
-      l.event = function(n2) {
-        return Z && (n2 = Z(n2)), n2.persist = Y, n2.isPropagationStopped = $2, n2.isDefaultPrevented = q3, n2.nativeEvent = n2;
-      };
-      J = { configurable: true, get: function() {
-        return this.class;
-      } };
-      K = l.vnode;
-      l.vnode = function(n2) {
-        var t3 = n2.type, e3 = n2.props, r3 = e3;
-        if (typeof t3 == "string") {
-          var u3 = t3.indexOf("-") === -1;
-          for (var o3 in r3 = {}, e3) {
-            var i3 = e3[o3];
-            V && o3 === "children" && t3 === "noscript" || o3 === "value" && "defaultValue" in e3 && i3 == null || (o3 === "defaultValue" && "value" in e3 && e3.value == null ? o3 = "value" : o3 === "download" && i3 === true ? i3 = "" : /ondoubleclick/i.test(o3) ? o3 = "ondblclick" : /^onchange(textarea|input)/i.test(o3 + t3) && !z2(e3.type) ? o3 = "oninput" : /^on(Ani|Tra|Tou|BeforeInp)/.test(o3) ? o3 = o3.toLowerCase() : u3 && P2.test(o3) ? o3 = o3.replace(/[A-Z0-9]/, "-$&").toLowerCase() : i3 === null && (i3 = void 0), r3[o3] = i3);
-          }
-          t3 == "select" && r3.multiple && Array.isArray(r3.value) && (r3.value = A(e3.children).forEach(function(n3) {
-            n3.props.selected = r3.value.indexOf(n3.props.value) != -1;
-          })), t3 == "select" && r3.defaultValue != null && (r3.value = A(e3.children).forEach(function(n3) {
-            n3.props.selected = r3.multiple ? r3.defaultValue.indexOf(n3.props.value) != -1 : r3.defaultValue == n3.props.value;
-          })), n2.props = r3;
-        }
-        t3 && e3.class != e3.className && (J.enumerable = "className" in e3, e3.className != null && (r3.class = e3.className), Object.defineProperty(r3, "className", J)), n2.$$typeof = j3, K && K(n2);
-      };
-      Q = l.__r;
-      l.__r = function(n2) {
-        Q && Q(n2), G = n2.__c;
-      };
-      X = { ReactCurrentDispatcher: { current: { readContext: function(n2) {
-        return G.__n[n2.__c].props.value;
-      } } } };
-      nn = "17.0.2";
-      ln = function(n2, t3) {
-        return n2(t3);
-      };
-      cn = function(n2, t3) {
-        return n2(t3);
-      };
-      fn = d;
-      compat_module_default = { useState: l2, useReducer: p2, useEffect: y2, useLayoutEffect: h2, useRef: s2, useImperativeHandle: _2, useMemo: A2, useCallback: F, useContext: T2, useDebugValue: d2, version: "17.0.2", Children: k3, render: B2, hydrate: H2, unmountComponentAtNode: un, createPortal: W, createElement: v, createContext: D, createFactory: tn, cloneElement: rn, createRef: p, Fragment: d, isValidElement: en, findDOMNode: on2, Component: _, PureComponent: E, memo: g3, forwardRef: x3, flushSync: cn, unstable_batchedUpdates: ln, StrictMode: d, Suspense: L2, SuspenseList: M2, lazy: F2, __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: X };
-    }
-  });
-
-  // node_modules/react-simple-code-editor/lib/index.js
-  var require_lib = __commonJS({
-    "node_modules/react-simple-code-editor/lib/index.js"(exports) {
-      "use strict";
-      Object.defineProperty(exports, "__esModule", {
-        value: true
-      });
-      var _extends = Object.assign || function(target) {
-        for (var i3 = 1; i3 < arguments.length; i3++) {
-          var source = arguments[i3];
-          for (var key in source) {
-            if (Object.prototype.hasOwnProperty.call(source, key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
-      };
-      var _createClass = function() {
-        function defineProperties(target, props) {
-          for (var i3 = 0; i3 < props.length; i3++) {
-            var descriptor = props[i3];
-            descriptor.enumerable = descriptor.enumerable || false;
-            descriptor.configurable = true;
-            if ("value" in descriptor)
-              descriptor.writable = true;
-            Object.defineProperty(target, descriptor.key, descriptor);
-          }
-        }
-        return function(Constructor, protoProps, staticProps) {
-          if (protoProps)
-            defineProperties(Constructor.prototype, protoProps);
-          if (staticProps)
-            defineProperties(Constructor, staticProps);
-          return Constructor;
-        };
-      }();
-      var _react = (init_compat_module(), compat_module_exports);
-      var React = _interopRequireWildcard(_react);
-      function _interopRequireWildcard(obj) {
-        if (obj && obj.__esModule) {
-          return obj;
-        } else {
-          var newObj = {};
-          if (obj != null) {
-            for (var key in obj) {
-              if (Object.prototype.hasOwnProperty.call(obj, key))
-                newObj[key] = obj[key];
-            }
-          }
-          newObj.default = obj;
-          return newObj;
-        }
-      }
-      function _objectWithoutProperties(obj, keys) {
-        var target = {};
-        for (var i3 in obj) {
-          if (keys.indexOf(i3) >= 0)
-            continue;
-          if (!Object.prototype.hasOwnProperty.call(obj, i3))
-            continue;
-          target[i3] = obj[i3];
-        }
-        return target;
-      }
-      function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-          throw new TypeError("Cannot call a class as a function");
-        }
-      }
-      function _possibleConstructorReturn(self2, call) {
-        if (!self2) {
-          throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-        }
-        return call && (typeof call === "object" || typeof call === "function") ? call : self2;
-      }
-      function _inherits(subClass, superClass) {
-        if (typeof superClass !== "function" && superClass !== null) {
-          throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-        }
-        subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });
-        if (superClass)
-          Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-      }
-      var KEYCODE_ENTER = 13;
-      var KEYCODE_TAB = 9;
-      var KEYCODE_BACKSPACE = 8;
-      var KEYCODE_Y = 89;
-      var KEYCODE_Z = 90;
-      var KEYCODE_M = 77;
-      var KEYCODE_PARENS = 57;
-      var KEYCODE_BRACKETS = 219;
-      var KEYCODE_QUOTE = 222;
-      var KEYCODE_BACK_QUOTE = 192;
-      var KEYCODE_ESCAPE = 27;
-      var HISTORY_LIMIT = 100;
-      var HISTORY_TIME_GAP = 3e3;
-      var isWindows = "navigator" in window && /Win/i.test(navigator.platform);
-      var isMacLike = "navigator" in window && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
-      var className = "npm__react-simple-code-editor__textarea";
-      var cssText = "\n/**\n * Reset the text fill color so that placeholder is visible\n */\n." + className + ":empty {\n  -webkit-text-fill-color: inherit !important;\n}\n\n/**\n * Hack to apply on some CSS on IE10 and IE11\n */\n@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {\n  /**\n    * IE doesn't support '-webkit-text-fill-color'\n    * So we use 'color: transparent' to make the text transparent on IE\n    * Unlike other browsers, it doesn't affect caret color in IE\n    */\n  ." + className + " {\n    color: transparent !important;\n  }\n\n  ." + className + "::selection {\n    background-color: #accef7 !important;\n    color: transparent !important;\n  }\n}\n";
-      var Editor2 = function(_React$Component) {
-        _inherits(Editor3, _React$Component);
-        function Editor3() {
-          var _ref;
-          var _temp, _this, _ret;
-          _classCallCheck(this, Editor3);
-          for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-          }
-          return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Editor3.__proto__ || Object.getPrototypeOf(Editor3)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            capture: true
-          }, _this._recordCurrentState = function() {
-            var input = _this._input;
-            if (!input)
-              return;
-            var value = input.value, selectionStart = input.selectionStart, selectionEnd = input.selectionEnd;
-            _this._recordChange({
-              value,
-              selectionStart,
-              selectionEnd
-            });
-          }, _this._getLines = function(text, position) {
-            return text.substring(0, position).split("\n");
-          }, _this._recordChange = function(record) {
-            var overwrite = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : false;
-            var _this$_history = _this._history, stack = _this$_history.stack, offset = _this$_history.offset;
-            if (stack.length && offset > -1) {
-              _this._history.stack = stack.slice(0, offset + 1);
-              var count = _this._history.stack.length;
-              if (count > HISTORY_LIMIT) {
-                var extras = count - HISTORY_LIMIT;
-                _this._history.stack = stack.slice(extras, count);
-                _this._history.offset = Math.max(_this._history.offset - extras, 0);
-              }
-            }
-            var timestamp = Date.now();
-            if (overwrite) {
-              var last = _this._history.stack[_this._history.offset];
-              if (last && timestamp - last.timestamp < HISTORY_TIME_GAP) {
-                var re = /[^a-z0-9]([a-z0-9]+)$/i;
-                var previous = _this._getLines(last.value, last.selectionStart).pop().match(re);
-                var current = _this._getLines(record.value, record.selectionStart).pop().match(re);
-                if (previous && current && current[1].startsWith(previous[1])) {
-                  _this._history.stack[_this._history.offset] = _extends({}, record, { timestamp });
-                  return;
-                }
-              }
-            }
-            _this._history.stack.push(_extends({}, record, { timestamp }));
-            _this._history.offset++;
-          }, _this._updateInput = function(record) {
-            var input = _this._input;
-            if (!input)
-              return;
-            input.value = record.value;
-            input.selectionStart = record.selectionStart;
-            input.selectionEnd = record.selectionEnd;
-            _this.props.onValueChange(record.value);
-          }, _this._applyEdits = function(record) {
-            var input = _this._input;
-            var last = _this._history.stack[_this._history.offset];
-            if (last && input) {
-              _this._history.stack[_this._history.offset] = _extends({}, last, {
-                selectionStart: input.selectionStart,
-                selectionEnd: input.selectionEnd
-              });
-            }
-            _this._recordChange(record);
-            _this._updateInput(record);
-          }, _this._undoEdit = function() {
-            var _this$_history2 = _this._history, stack = _this$_history2.stack, offset = _this$_history2.offset;
-            var record = stack[offset - 1];
-            if (record) {
-              _this._updateInput(record);
-              _this._history.offset = Math.max(offset - 1, 0);
-            }
-          }, _this._redoEdit = function() {
-            var _this$_history3 = _this._history, stack = _this$_history3.stack, offset = _this$_history3.offset;
-            var record = stack[offset + 1];
-            if (record) {
-              _this._updateInput(record);
-              _this._history.offset = Math.min(offset + 1, stack.length - 1);
-            }
-          }, _this._handleKeyDown = function(e3) {
-            var _this$props = _this.props, tabSize = _this$props.tabSize, insertSpaces = _this$props.insertSpaces, ignoreTabKey = _this$props.ignoreTabKey, onKeyDown = _this$props.onKeyDown;
-            if (onKeyDown) {
-              onKeyDown(e3);
-              if (e3.defaultPrevented) {
-                return;
-              }
-            }
-            if (e3.keyCode === KEYCODE_ESCAPE) {
-              e3.target.blur();
-            }
-            var _e$target = e3.target, value = _e$target.value, selectionStart = _e$target.selectionStart, selectionEnd = _e$target.selectionEnd;
-            var tabCharacter = (insertSpaces ? " " : "	").repeat(tabSize);
-            if (e3.keyCode === KEYCODE_TAB && !ignoreTabKey && _this.state.capture) {
-              e3.preventDefault();
-              if (e3.shiftKey) {
-                var linesBeforeCaret = _this._getLines(value, selectionStart);
-                var startLine = linesBeforeCaret.length - 1;
-                var endLine = _this._getLines(value, selectionEnd).length - 1;
-                var nextValue = value.split("\n").map(function(line2, i3) {
-                  if (i3 >= startLine && i3 <= endLine && line2.startsWith(tabCharacter)) {
-                    return line2.substring(tabCharacter.length);
-                  }
-                  return line2;
-                }).join("\n");
-                if (value !== nextValue) {
-                  var startLineText = linesBeforeCaret[startLine];
-                  _this._applyEdits({
-                    value: nextValue,
-                    selectionStart: startLineText.startsWith(tabCharacter) ? selectionStart - tabCharacter.length : selectionStart,
-                    selectionEnd: selectionEnd - (value.length - nextValue.length)
-                  });
-                }
-              } else if (selectionStart !== selectionEnd) {
-                var _linesBeforeCaret = _this._getLines(value, selectionStart);
-                var _startLine = _linesBeforeCaret.length - 1;
-                var _endLine = _this._getLines(value, selectionEnd).length - 1;
-                var _startLineText = _linesBeforeCaret[_startLine];
-                _this._applyEdits({
-                  value: value.split("\n").map(function(line2, i3) {
-                    if (i3 >= _startLine && i3 <= _endLine) {
-                      return tabCharacter + line2;
-                    }
-                    return line2;
-                  }).join("\n"),
-                  selectionStart: /\S/.test(_startLineText) ? selectionStart + tabCharacter.length : selectionStart,
-                  selectionEnd: selectionEnd + tabCharacter.length * (_endLine - _startLine + 1)
-                });
-              } else {
-                var updatedSelection = selectionStart + tabCharacter.length;
-                _this._applyEdits({
-                  value: value.substring(0, selectionStart) + tabCharacter + value.substring(selectionEnd),
-                  selectionStart: updatedSelection,
-                  selectionEnd: updatedSelection
-                });
-              }
-            } else if (e3.keyCode === KEYCODE_BACKSPACE) {
-              var hasSelection = selectionStart !== selectionEnd;
-              var textBeforeCaret = value.substring(0, selectionStart);
-              if (textBeforeCaret.endsWith(tabCharacter) && !hasSelection) {
-                e3.preventDefault();
-                var _updatedSelection = selectionStart - tabCharacter.length;
-                _this._applyEdits({
-                  value: value.substring(0, selectionStart - tabCharacter.length) + value.substring(selectionEnd),
-                  selectionStart: _updatedSelection,
-                  selectionEnd: _updatedSelection
-                });
-              }
-            } else if (e3.keyCode === KEYCODE_ENTER) {
-              if (selectionStart === selectionEnd) {
-                var line = _this._getLines(value, selectionStart).pop();
-                var matches = line.match(/^\s+/);
-                if (matches && matches[0]) {
-                  e3.preventDefault();
-                  var indent = "\n" + matches[0];
-                  var _updatedSelection2 = selectionStart + indent.length;
-                  _this._applyEdits({
-                    value: value.substring(0, selectionStart) + indent + value.substring(selectionEnd),
-                    selectionStart: _updatedSelection2,
-                    selectionEnd: _updatedSelection2
-                  });
-                }
-              }
-            } else if (e3.keyCode === KEYCODE_PARENS || e3.keyCode === KEYCODE_BRACKETS || e3.keyCode === KEYCODE_QUOTE || e3.keyCode === KEYCODE_BACK_QUOTE) {
-              var chars = void 0;
-              if (e3.keyCode === KEYCODE_PARENS && e3.shiftKey) {
-                chars = ["(", ")"];
-              } else if (e3.keyCode === KEYCODE_BRACKETS) {
-                if (e3.shiftKey) {
-                  chars = ["{", "}"];
-                } else {
-                  chars = ["[", "]"];
-                }
-              } else if (e3.keyCode === KEYCODE_QUOTE) {
-                if (e3.shiftKey) {
-                  chars = ['"', '"'];
-                } else {
-                  chars = ["'", "'"];
-                }
-              } else if (e3.keyCode === KEYCODE_BACK_QUOTE && !e3.shiftKey) {
-                chars = ["`", "`"];
-              }
-              if (selectionStart !== selectionEnd && chars) {
-                e3.preventDefault();
-                _this._applyEdits({
-                  value: value.substring(0, selectionStart) + chars[0] + value.substring(selectionStart, selectionEnd) + chars[1] + value.substring(selectionEnd),
-                  selectionStart,
-                  selectionEnd: selectionEnd + 2
-                });
-              }
-            } else if ((isMacLike ? e3.metaKey && e3.keyCode === KEYCODE_Z : e3.ctrlKey && e3.keyCode === KEYCODE_Z) && !e3.shiftKey && !e3.altKey) {
-              e3.preventDefault();
-              _this._undoEdit();
-            } else if ((isMacLike ? e3.metaKey && e3.keyCode === KEYCODE_Z && e3.shiftKey : isWindows ? e3.ctrlKey && e3.keyCode === KEYCODE_Y : e3.ctrlKey && e3.keyCode === KEYCODE_Z && e3.shiftKey) && !e3.altKey) {
-              e3.preventDefault();
-              _this._redoEdit();
-            } else if (e3.keyCode === KEYCODE_M && e3.ctrlKey && (isMacLike ? e3.shiftKey : true)) {
-              e3.preventDefault();
-              _this.setState(function(state) {
-                return {
-                  capture: !state.capture
-                };
-              });
-            }
-          }, _this._handleChange = function(e3) {
-            var _e$target2 = e3.target, value = _e$target2.value, selectionStart = _e$target2.selectionStart, selectionEnd = _e$target2.selectionEnd;
-            _this._recordChange({
-              value,
-              selectionStart,
-              selectionEnd
-            }, true);
-            _this.props.onValueChange(value);
-          }, _this._history = {
-            stack: [],
-            offset: -1
-          }, _temp), _possibleConstructorReturn(_this, _ret);
-        }
-        _createClass(Editor3, [{
-          key: "componentDidMount",
-          value: function componentDidMount() {
-            this._recordCurrentState();
-          }
-        }, {
-          key: "render",
-          value: function render2() {
-            var _this2 = this;
-            var _props = this.props, value = _props.value, style = _props.style, padding = _props.padding, highlight2 = _props.highlight, textareaId = _props.textareaId, textareaClassName = _props.textareaClassName, autoFocus = _props.autoFocus, disabled = _props.disabled, form = _props.form, maxLength = _props.maxLength, minLength = _props.minLength, name = _props.name, placeholder = _props.placeholder, readOnly = _props.readOnly, required = _props.required, onClick = _props.onClick, onFocus = _props.onFocus, onBlur = _props.onBlur, onKeyUp = _props.onKeyUp, onKeyDown = _props.onKeyDown, onValueChange = _props.onValueChange, tabSize = _props.tabSize, insertSpaces = _props.insertSpaces, ignoreTabKey = _props.ignoreTabKey, preClassName = _props.preClassName, rest = _objectWithoutProperties(_props, ["value", "style", "padding", "highlight", "textareaId", "textareaClassName", "autoFocus", "disabled", "form", "maxLength", "minLength", "name", "placeholder", "readOnly", "required", "onClick", "onFocus", "onBlur", "onKeyUp", "onKeyDown", "onValueChange", "tabSize", "insertSpaces", "ignoreTabKey", "preClassName"]);
-            var contentStyle = {
-              paddingTop: padding,
-              paddingRight: padding,
-              paddingBottom: padding,
-              paddingLeft: padding
-            };
-            var highlighted = highlight2(value);
-            return React.createElement("div", _extends({}, rest, { style: _extends({}, styles.container, style) }), React.createElement("textarea", {
-              ref: function ref(c3) {
-                return _this2._input = c3;
-              },
-              style: _extends({}, styles.editor, styles.textarea, contentStyle),
-              className: className + (textareaClassName ? " " + textareaClassName : ""),
-              id: textareaId,
-              value,
-              onChange: this._handleChange,
-              onKeyDown: this._handleKeyDown,
-              onClick,
-              onKeyUp,
-              onFocus,
-              onBlur,
-              disabled,
-              form,
-              maxLength,
-              minLength,
-              name,
-              placeholder,
-              readOnly,
-              required,
-              autoFocus,
-              autoCapitalize: "off",
-              autoComplete: "off",
-              autoCorrect: "off",
-              spellCheck: false,
-              "data-gramm": false
-            }), React.createElement("pre", _extends({
-              className: preClassName,
-              "aria-hidden": "true",
-              style: _extends({}, styles.editor, styles.highlight, contentStyle)
-            }, typeof highlighted === "string" ? { dangerouslySetInnerHTML: { __html: highlighted + "<br />" } } : { children: highlighted })), React.createElement("style", { type: "text/css", dangerouslySetInnerHTML: { __html: cssText } }));
-          }
-        }, {
-          key: "session",
-          get: function get() {
-            return {
-              history: this._history
-            };
-          },
-          set: function set(session) {
-            this._history = session.history;
-          }
-        }]);
-        return Editor3;
-      }(React.Component);
-      Editor2.defaultProps = {
-        tabSize: 2,
-        insertSpaces: true,
-        ignoreTabKey: false,
-        padding: 0
-      };
-      exports.default = Editor2;
-      var styles = {
-        container: {
-          position: "relative",
-          textAlign: "left",
-          boxSizing: "border-box",
-          padding: 0,
-          overflow: "hidden"
-        },
-        textarea: {
-          position: "absolute",
-          top: 0,
-          left: 0,
-          height: "100%",
-          width: "100%",
-          resize: "none",
-          color: "inherit",
-          overflow: "hidden",
-          MozOsxFontSmoothing: "grayscale",
-          WebkitFontSmoothing: "antialiased",
-          WebkitTextFillColor: "transparent"
-        },
-        highlight: {
-          position: "relative",
-          pointerEvents: "none"
-        },
-        editor: {
-          margin: 0,
-          border: 0,
-          background: "none",
-          boxSizing: "inherit",
-          display: "inherit",
-          fontFamily: "inherit",
-          fontSize: "inherit",
-          fontStyle: "inherit",
-          fontVariantLigatures: "inherit",
-          fontWeight: "inherit",
-          letterSpacing: "inherit",
-          lineHeight: "inherit",
-          tabSize: "inherit",
-          textIndent: "inherit",
-          textRendering: "inherit",
-          textTransform: "inherit",
-          whiteSpace: "pre-wrap",
-          wordBreak: "keep-all",
-          overflowWrap: "break-word"
-        }
-      };
-    }
-  });
-
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/82ccb01e-1619-4d1e-8ac2-507f9b10adb1/styles.js
+  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/8c35fa66-7055-4c49-a764-0b94b6357043/styles.js
   var styles_default;
   var init_styles = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/82ccb01e-1619-4d1e-8ac2-507f9b10adb1/styles.js"() {
-      if (document.getElementById("e318750a65") === null) {
+    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/8c35fa66-7055-4c49-a764-0b94b6357043/styles.js"() {
+      if (document.getElementById("9732e5c398") === null) {
         const element = document.createElement("style");
-        element.id = "e318750a65";
-        element.textContent = `._container_1itdc_1 {
+        element.id = "9732e5c398";
+        element.textContent = `._container_1ds5p_1 {
   height: 164px;
   overflow: auto;
 }
 
-._editor_1itdc_6 {
-  min-height: 100%;
-  font-size: var(--font-size-16);
+._editor_1ds5p_6 {
+  counter-reset: line !important;
+  min-height: 100% !!important;
+  font-size: 14px !important;
+  line-height: 22px !important;
   font-family: var(--font-family-code);
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsOEJBQThCO0VBQzlCLG9DQUFvQztBQUN0QyIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWluZXIge1xuICBoZWlnaHQ6IDE2NHB4O1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLmVkaXRvciB7XG4gIG1pbi1oZWlnaHQ6IDEwMCU7XG4gIGZvbnQtc2l6ZTogdmFyKC0tZm9udC1zaXplLTE2KTtcbiAgZm9udC1mYW1pbHk6IHZhcigtLWZvbnQtZmFtaWx5LWNvZGUpO1xufVxuIl19 */`;
+._editor_1ds5p_6 #_codeArea_1ds5p_1 {
+  outline: none;
+  padding-left: 60px !important;
+}
+
+._editor_1ds5p_6 pre {
+  padding-left: 60px !important;
+}
+
+._editor_1ds5p_6 ._editorLineNumber_1ds5p_23 {
+  position: absolute;
+  left: 0px;
+  color: #cccccc;
+  text-align: right;
+  width: 40px;
+  font-weight: 100;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9jb21wb25lbnRzL0VkaXRvci9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSw4QkFBOEI7RUFDOUIsNEJBQTRCO0VBQzVCLDBCQUEwQjtFQUMxQiw0QkFBNEI7RUFDNUIsb0NBQW9DO0FBQ3RDOztBQUVBO0VBQ0UsYUFBYTtFQUNiLDZCQUE2QjtBQUMvQjs7QUFFQTtFQUNFLDZCQUE2QjtBQUMvQjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixTQUFTO0VBQ1QsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixXQUFXO0VBQ1gsZ0JBQWdCO0FBQ2xCIiwiZmlsZSI6InNyYy9jb21wb25lbnRzL0VkaXRvci9zdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XG4gIGhlaWdodDogMTY0cHg7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG4uZWRpdG9yIHtcbiAgY291bnRlci1yZXNldDogbGluZSAhaW1wb3J0YW50O1xuICBtaW4taGVpZ2h0OiAxMDAlICEhaW1wb3J0YW50O1xuICBmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbiAgbGluZS1oZWlnaHQ6IDIycHggIWltcG9ydGFudDtcbiAgZm9udC1mYW1pbHk6IHZhcigtLWZvbnQtZmFtaWx5LWNvZGUpO1xufVxuXG4uZWRpdG9yICNjb2RlQXJlYSB7XG4gIG91dGxpbmU6IG5vbmU7XG4gIHBhZGRpbmctbGVmdDogNjBweCAhaW1wb3J0YW50O1xufVxuXG4uZWRpdG9yIHByZSB7XG4gIHBhZGRpbmctbGVmdDogNjBweCAhaW1wb3J0YW50O1xufVxuXG4uZWRpdG9yIC5lZGl0b3JMaW5lTnVtYmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBsZWZ0OiAwcHg7XG4gIGNvbG9yOiAjY2NjY2NjO1xuICB0ZXh0LWFsaWduOiByaWdodDtcbiAgd2lkdGg6IDQwcHg7XG4gIGZvbnQtd2VpZ2h0OiAxMDA7XG59Il19 */`;
         document.head.append(element);
       }
-      styles_default = { "container": "_container_1itdc_1", "editor": "_editor_1itdc_6" };
+      styles_default = { "container": "_container_1ds5p_1", "editor": "_editor_1ds5p_6", "codeArea": "_codeArea_1ds5p_1", "editorLineNumber": "_editorLineNumber_1ds5p_23" };
     }
   });
 
-  // node_modules/prismjs/components/prism-clike.js
+  // ../../node_modules/prismjs/components/prism-clike.js
   var init_prism_clike = __esm({
-    "node_modules/prismjs/components/prism-clike.js"() {
+    "../../node_modules/prismjs/components/prism-clike.js"() {
       Prism.languages.clike = {
         "comment": [
           {
@@ -2749,9 +2479,9 @@ svg {
     }
   });
 
-  // node_modules/prismjs/components/prism-javascript.js
+  // ../../node_modules/prismjs/components/prism-javascript.js
   var init_prism_javascript = __esm({
-    "node_modules/prismjs/components/prism-javascript.js"() {
+    "../../node_modules/prismjs/components/prism-javascript.js"() {
       Prism.languages.javascript = Prism.languages.extend("clike", {
         "class-name": [
           Prism.languages.clike["class-name"],
@@ -2856,12 +2586,12 @@ svg {
     }
   });
 
-  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/4c8f6da5-ae60-4d92-9c28-b1487bf46d49/prism.js
+  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/20d739ec-601e-4933-80d6-0a3dcea098b1/prism.js
   var init_prism = __esm({
-    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/4c8f6da5-ae60-4d92-9c28-b1487bf46d49/prism.js"() {
-      if (document.getElementById("0f53578318") === null) {
+    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/20d739ec-601e-4933-80d6-0a3dcea098b1/prism.js"() {
+      if (document.getElementById("7fbd40aefc") === null) {
         const element = document.createElement("style");
-        element.id = "0f53578318";
+        element.id = "7fbd40aefc";
         element.textContent = `/**
  * prism.js default theme for JavaScript, CSS and HTML
  * Based on dabblet (http://dabblet.com)
@@ -3008,45 +2738,126 @@ pre[class*="language-"] {
     }
   });
 
+  // src/components/Editor/Editor.tsx
+  var import_react_simple_code_editor, import_prismjs, TextEditor;
+  var init_Editor = __esm({
+    "src/components/Editor/Editor.tsx"() {
+      init_preact_module();
+      import_react_simple_code_editor = __toModule(require_lib());
+      import_prismjs = __toModule(require_prism());
+      init_styles();
+      init_prism_clike();
+      init_prism_javascript();
+      init_prism();
+      TextEditor = ({ code, setCode }) => {
+        return /* @__PURE__ */ v(import_react_simple_code_editor.default, {
+          highlight: function(code2) {
+            return (0, import_prismjs.highlight)(code2, import_prismjs.languages.js, "js");
+          },
+          padding: 12,
+          onValueChange: setCode,
+          preClassName: styles_default.editor,
+          textareaClassName: styles_default.editor,
+          value: code
+        });
+      };
+    }
+  });
+
+  // src/components/Editor/index.ts
+  var Editor_default;
+  var init_Editor2 = __esm({
+    "src/components/Editor/index.ts"() {
+      init_Editor();
+      Editor_default = TextEditor;
+    }
+  });
+
+  // ../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/f2e21607-c1e6-46ad-9925-217cd5d6977f/styles.js
+  var styles_default2;
+  var init_styles2 = __esm({
+    "../../../../../../private/var/folders/ts/zryjz1lx11gcydvz5pfmn9x00000gn/T/f2e21607-c1e6-46ad-9925-217cd5d6977f/styles.js"() {
+      if (document.getElementById("e318750a65") === null) {
+        const element = document.createElement("style");
+        element.id = "e318750a65";
+        element.textContent = `._header_1xcxa_1 {
+  width: 100vw;
+  padding: 6px 8px;
+  border-bottom: 1px solid #d8d8da;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+._title_1xcxa_11 {
+  font-family: "Inter", --apple-system;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #141414;
+}
+
+._button_1xcxa_19 {
+  min-width: 64px;
+  padding: 8px;
+  background: #ffffff;
+  border: 1px solid #d8d8da;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: #141414;
+  font-family: "Inter", --apple-system;
+  font-size: 12px;
+  font-weight: 600;  
+  line-height: 16px;
+  text-align: center;
+  transition: background 0.1s ease-in;
+}
+
+._button_1xcxa_19:hover {
+  cursor: pointer;
+  background: #f4f4f4;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixnQ0FBZ0M7RUFDaEMsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQiw4QkFBOEI7RUFDOUIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGNBQWM7QUFDaEI7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsWUFBWTtFQUNaLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsc0JBQXNCO0VBQ3RCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2Qsb0NBQW9DO0VBQ3BDLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixtQ0FBbUM7QUFDckM7O0FBRUE7RUFDRSxlQUFlO0VBQ2YsbUJBQW1CO0FBQ3JCIiwiZmlsZSI6InNyYy9zdHlsZXMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmhlYWRlciB7XG4gIHdpZHRoOiAxMDB2dztcbiAgcGFkZGluZzogNnB4IDhweDtcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNkOGQ4ZGE7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLnRpdGxlIHtcbiAgZm9udC1mYW1pbHk6IFwiSW50ZXJcIiwgLS1hcHBsZS1zeXN0ZW07XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC13ZWlnaHQ6IDYwMDtcbiAgbGluZS1oZWlnaHQ6IDIwcHg7XG4gIGNvbG9yOiAjMTQxNDE0O1xufVxuXG4uYnV0dG9uIHtcbiAgbWluLXdpZHRoOiA2NHB4O1xuICBwYWRkaW5nOiA4cHg7XG4gIGJhY2tncm91bmQ6ICNmZmZmZmY7XG4gIGJvcmRlcjogMXB4IHNvbGlkICNkOGQ4ZGE7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgY29sb3I6ICMxNDE0MTQ7XG4gIGZvbnQtZmFtaWx5OiBcIkludGVyXCIsIC0tYXBwbGUtc3lzdGVtO1xuICBmb250LXNpemU6IDEycHg7XG4gIGZvbnQtd2VpZ2h0OiA2MDA7ICBcbiAgbGluZS1oZWlnaHQ6IDE2cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdHJhbnNpdGlvbjogYmFja2dyb3VuZCAwLjFzIGVhc2UtaW47XG59XG5cbi5idXR0b246aG92ZXIge1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJhY2tncm91bmQ6ICNmNGY0ZjQ7XG59Il19 */`;
+        document.head.append(element);
+      }
+      styles_default2 = { "header": "_header_1xcxa_1", "title": "_title_1xcxa_11", "button": "_button_1xcxa_19" };
+    }
+  });
+
   // src/ui.tsx
   var ui_exports = {};
   __export(ui_exports, {
     default: () => ui_default
   });
   function Plugin() {
-    const [code, setCode] = l2(`describe interface as "Sign up" {
+    const [code, setCode] = l2(`describe interface "Sign up" as {
   "Hello world"
 }`);
     const handleInsertCodeButtonClick = F(function() {
       emit("INSERT_CODE", code);
     }, [code]);
-    return /* @__PURE__ */ v(Container, null, /* @__PURE__ */ v("div", {
-      class: styles_default.container
-    }, /* @__PURE__ */ v(import_react_simple_code_editor.default, {
-      highlight: function(code2) {
-        return (0, import_prismjs.highlight)(code2, import_prismjs.languages.js, "js");
-      },
-      onValueChange: setCode,
-      preClassName: styles_default.editor,
-      textareaClassName: styles_default.editor,
-      value: code
-    })), /* @__PURE__ */ v(Button, {
+    return /* @__PURE__ */ v("div", null, /* @__PURE__ */ v("div", {
+      className: styles_default2.header
+    }, /* @__PURE__ */ v("h1", {
+      className: styles_default2.title
+    }, "Scratch Pad"), /* @__PURE__ */ v("button", {
+      className: styles_default2.button,
       onClick: handleInsertCodeButtonClick
-    }, "Insert Code"));
+    }, "Run")), /* @__PURE__ */ v(Editor_default, {
+      code,
+      setCode
+    }));
   }
-  var import_prismjs, import_react_simple_code_editor, ui_default;
+  var ui_default;
   var init_ui = __esm({
     "src/ui.tsx"() {
       init_lib2();
       init_lib();
       init_preact_module();
       init_hooks_module();
-      import_prismjs = __toModule(require_prism());
-      import_react_simple_code_editor = __toModule(require_lib());
-      init_styles();
-      init_prism_clike();
-      init_prism_javascript();
-      init_prism();
+      init_Editor2();
+      init_styles2();
       ui_default = render(Plugin);
     }
   });

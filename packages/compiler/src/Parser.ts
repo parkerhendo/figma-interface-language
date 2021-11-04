@@ -69,10 +69,9 @@ export default class Parser implements IParser {
         const descriptor = this.advance.type;
         this.eat(TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
 
-        this.eat(TokenType.TOKEN_AS, "Expected 'as' before name.");
-
         const name = this.eat(TokenType.TOKEN_STRING, "Expected STRING after 'as'");
 
+        this.eat(TokenType.TOKEN_AS, "Expected 'as' before name.");
 
         const body = this.advance.value !== TokenType.TOKEN_RIGHT_BRACE ? this.DeclarationBody() : [];
 

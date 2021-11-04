@@ -11,13 +11,13 @@ function exec() {
   const parser = new Parser();
   const program = `
 
-    describe interface as "Sign Up" { "hello" }
+    describe interface "Sign Up" as { "hello" }
 
   `;
 
 
   const prog = parser.parse(program);
-  // console.log(JSON.stringify(prog, null, 2));
+  console.log(JSON.stringify(prog, null, 2));
 }
 
 // manual text

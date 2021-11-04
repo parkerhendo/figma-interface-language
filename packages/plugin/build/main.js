@@ -29,7 +29,7 @@
     return __reExport(__markAsModule(__defProp(module != null ? __create(__getProtoOf(module)) : {}, "default", module && module.__esModule && "default" in module ? { get: () => module.default, enumerable: true } : { value: module, enumerable: true })), module);
   };
 
-  // node_modules/@create-figma-plugin/utilities/lib/events.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/events.js
   function on(name, handler) {
     const id = `${currentId}`;
     currentId += 1;
@@ -37,16 +37,6 @@
     return function() {
       delete eventHandlers[id];
     };
-  }
-  function once(name, handler) {
-    let done = false;
-    return on(name, function(...args) {
-      if (done === true) {
-        return;
-      }
-      done = true;
-      handler(...args);
-    });
   }
   function invokeEventHandler(name, args) {
     for (const id in eventHandlers) {
@@ -57,7 +47,7 @@
   }
   var eventHandlers, currentId;
   var init_events = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/events.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/events.js"() {
       eventHandlers = {};
       currentId = 0;
       if (typeof window === "undefined") {
@@ -73,7 +63,7 @@
     }
   });
 
-  // node_modules/@create-figma-plugin/utilities/lib/node/load-fonts-async.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/node/load-fonts-async.js
   async function loadFontsAsync(nodes) {
     const result = {};
     for (const node of nodes) {
@@ -119,11 +109,11 @@
     return `${fontName.family}-${fontName.style}`;
   }
   var init_load_fonts_async = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/node/load-fonts-async.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/node/load-fonts-async.js"() {
     }
   });
 
-  // node_modules/@create-figma-plugin/utilities/lib/ui.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/ui.js
   function showUI(options, data) {
     if (typeof __html__ === "undefined") {
       throw new Error("No UI defined");
@@ -132,13 +122,13 @@
     figma.showUI(html, options);
   }
   var init_ui = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/ui.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/ui.js"() {
     }
   });
 
-  // node_modules/@create-figma-plugin/utilities/lib/index.js
+  // ../../node_modules/@create-figma-plugin/utilities/lib/index.js
   var init_lib = __esm({
-    "node_modules/@create-figma-plugin/utilities/lib/index.js"() {
+    "../../node_modules/@create-figma-plugin/utilities/lib/index.js"() {
       init_events();
       init_load_fonts_async();
       init_ui();
@@ -367,8 +357,8 @@
               this.eat(tokens_1.TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
               var descriptor = this.advance.type;
               this.eat(tokens_1.TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
-              this.eat(tokens_1.TokenType.TOKEN_AS, "Expected 'as' before name.");
               var name_1 = this.eat(tokens_1.TokenType.TOKEN_STRING, "Expected STRING after 'as'");
+              this.eat(tokens_1.TokenType.TOKEN_AS, "Expected 'as' before name.");
               var body = this.advance.value !== tokens_1.TokenType.TOKEN_RIGHT_BRACE ? this.DeclarationBody() : [];
               return {
                 type: tokens_1.TokenType.TOKEN_DESCRIBE,
@@ -414,18 +404,18 @@
       Object.defineProperty(exports, "__esModule", { value: true });
       exports.interpret = void 0;
       var Parser_1 = __importDefault(require_Parser());
-      function exec() {
-        var parser = new Parser_1.default();
-        var program = '\n\n    describe interface as "Sign Up" { "hello" }\n\n  ';
-        var prog = parser.parse(program);
-        console.log(JSON.stringify(prog, null, 2));
-      }
-      exec();
       function interpret2(source) {
         var parser = new Parser_1.default();
         return parser.parse(source);
       }
       exports.interpret = interpret2;
+      function exec() {
+        var parser = new Parser_1.default();
+        var program = '\n\n    describe interface "Sign Up" as { "hello" }\n\n  ';
+        var prog = parser.parse(program);
+        console.log(JSON.stringify(prog, null, 2));
+      }
+      exec();
     }
   });
 
@@ -439,10 +429,9 @@
     const descriptor = json.body[0].descriptor;
     const params = json.body[0].params;
     const content = json.body[0].body;
-    console.log(typeof content);
-    let frame;
+    console.log(type, descriptor, params, content);
+    let frame = figma.createFrame();
     if (descriptor == "TOKEN_INTERFACE") {
-      frame = figma.createFrame();
       frame.name = params.name;
       frame.layoutMode = "VERTICAL";
       frame.primaryAxisAlignItems = "CENTER";
@@ -459,11 +448,9 @@
     return frame;
   }
   function main_default() {
-    once("INSERT_CODE", async function(code) {
+    on("INSERT_CODE", async function(code) {
       const parsedCode = (0, import_compiler.interpret)(code);
-      const result = await buildInterface(parsedCode);
-      figma.viewport.scrollAndZoomIntoView(figma.setSelection(result));
-      figma.closePlugin();
+      await buildInterface(parsedCode);
     });
     showUI({ width: 400, height: 720 });
   }
