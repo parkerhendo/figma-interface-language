@@ -17,7 +17,7 @@
 }
 
 .button {
-  min-width: 64px;
+  /*min-width: 64px;*/
   padding: 8px;
   background: #ffffff;
   border: 1px solid #d8d8da;
