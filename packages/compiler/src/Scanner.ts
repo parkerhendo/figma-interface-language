@@ -34,8 +34,11 @@ const Spec: [RegExp, TokenType | null][] = [
   // Keywords:
   [/^\bdeclare\b/, TokenType.TOKEN_DECLARE],
   [/^\bdescribe\b/, TokenType.TOKEN_DESCRIBE],
+  [/^\bdefine\b/, TokenType.TOKEN_DEFINE],
   [/^\bas\b/, TokenType.TOKEN_AS],
 
+  [/^\bwidth\b/, TokenType.TOKEN_WIDTH],
+  [/^\bheight\b/, TokenType.TOKEN_HEIGHT],
 
   // -----------------------------------------------
   // Type:
@@ -53,6 +56,11 @@ const Spec: [RegExp, TokenType | null][] = [
   
   [/"[^"]*"/, TokenType.TOKEN_STRING],
   [/'[^']*'/, TokenType.TOKEN_STRING],
+
+  // -----------------------------------------------
+  // Strings:
+  [/^\d+/, TokenType.TOKEN_NUMBER]
+  
 ];
 
 
@@ -97,9 +105,9 @@ export default class Scanner implements IScanner {
     return this.cursor < this.source.length;
   }
 
-  advance() :Token {
+  advance() :Token | null {
 
-    if (!this.hasMore()) return new Token(TokenType.TOKEN_EOF, "\0");
+    if (!this.hasMore()) return null;
 
     const string = this.source.slice(this.cursor);
 
@@ -114,7 +122,7 @@ export default class Scanner implements IScanner {
       return token;
     }
 
-    return new ErrorToken(`Unexpected token: "${string[0]}`);
+    throw new Error(`Unexpected token: "${string[0]}`);
   }
 
   match(regexp :RegExp, string :string | null) :any {

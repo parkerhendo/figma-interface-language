@@ -5,8 +5,11 @@ export enum TokenType {
   
   // Keywords
   TOKEN_DESCRIBE = 'TOKEN_DESCRIBE',                                     // describe
+  TOKEN_DEFINE = 'TOKEN_DEFINE',
   TOKEN_DECLARE = 'TOKEN_DECLARE',                                      // declare
   TOKEN_AS = 'TOKEN_AS',                                           // as
+  TOKEN_WIDTH = 'TOKEN_WIDTH',
+  TOKEN_HEIGHT = 'TOKEN_HEIGHT',
 
   // TYPES
   TOKEN_COMPONENT = 'TOKEN_COMPONENT',                                    // Component
@@ -15,6 +18,7 @@ export enum TokenType {
 
   // Single character
   TOKEN_STRING = 'TOKEN_STRING',
+  TOKEN_NUMBER = 'TOKEN_NUMBER',
   TOKEN_LEFT_BRACE = 'TOKEN_LEFT_BRACE', 
   TOKEN_RIGHT_BRACE = 'TOKEN_RIGHT_BRACE',                // '{' and '}'
   TOKEN_LEFT_PAREN = 'TOKEN_LEFT_PAREN', 

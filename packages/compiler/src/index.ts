@@ -9,10 +9,10 @@ export function interpret(source :string): Doc {
 // FOR TESTING
 function exec() {
   const parser = new Parser();
+
   const program = `
-
     describe interface "Sign Up" as { "hello" }
-
+    describe interface "What's Up" as { "fren" }
   `;
 
   const prog = parser.parse(program);
@@ -20,4 +20,4 @@ function exec() {
 }
 
 // manual text
-exec();
+// exec();

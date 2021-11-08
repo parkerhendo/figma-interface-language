@@ -1,0 +1,1 @@
+declare module '@figma-interface-language/compiler';
