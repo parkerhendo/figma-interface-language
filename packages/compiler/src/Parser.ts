@@ -17,11 +17,14 @@ export type Declaration = {
   descriptor: TokenType,
   params?: Parameters,
   body?: any
-};
+} | undefined;
 
 export type DeclarationList = Declaration[];
 
-export type Doc = { type: string, body: DeclarationList };
+export type Doc = { 
+  type: string,
+  body: DeclarationList 
+};
 
 export default class Parser implements IParser {
   source: string;
@@ -42,7 +45,6 @@ export default class Parser implements IParser {
     return this.Document();
   }
 
-
   Document(): Doc {
     return {
       type: 'Document',
@@ -53,15 +55,14 @@ export default class Parser implements IParser {
   DeclarationList(stopAdvance: TokenType | null = null): DeclarationList {
     const declarationList: Declaration[] = [this.Declaration() as Declaration];
 
-    // while (this.advance != null && this.advance.type !== stopAdvance) {
-      // declarationList.push(this.Declaration() as Declaration)
-    // }
+    while (this.advance != null && this.advance.type != stopAdvance) {
+      declarationList.push(this.Declaration() as Declaration);
+    }
 
     return declarationList;
   }
 
-
-  Declaration() {
+  Declaration() :Declaration | Token {
     switch (this.advance?.type) {
       case TokenType.TOKEN_DESCRIBE: {
         this.eat(TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
@@ -82,6 +83,10 @@ export default class Parser implements IParser {
           body
         }
       }
+      default:
+        if (this.advance == null) {
+          this.advance = this.scanner.advance()
+        }
     }
   }
 

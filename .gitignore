@@ -1,3 +1,5 @@
+packages/**/build
 node_modules
-packages/compiler/build
-packages/plugin/build
+*.js
+packages/plugin/build/ui.js
+packages/plugin/build/main.js

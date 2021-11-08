@@ -1,43 +1,26 @@
-import { loadFontsAsync, on, showUI } from '@create-figma-plugin/utilities'
-
+import { loadFontsAsync, on, once, showUI } from '@create-figma-plugin/utilities'
 import { InsertCodeHandler } from './types'
 
-// @ts-ignore
-import { interpret } from '@figma-interface-language/compiler';
+//@ts-ignore
+import { interpret, Declaration } from '@figma-interface-language/compiler';
 
-// @ts-ignore
-async function buildInterface(json) {
-  const type = json.body[0].type;
-  const descriptor = json.body[0].descriptor;
-  const params = json.body[0].params;
-  const content = json.body[0].body;
+import {CompilerData} from './types/CompilerData'; 
 
-  console.log(type, descriptor, params, content);
 
-  let frame = figma.createFrame()
-  if (descriptor == "TOKEN_INTERFACE") {
-    frame.name = params.name;
-    frame.layoutMode = "VERTICAL";
-    frame.primaryAxisAlignItems = "CENTER";
-    frame.counterAxisAlignItems = "CENTER";
-    frame.resize(128, 128);
-  }
+import buildInterface from './actions';
 
-  if (typeof content === 'string') {
-    const text = figma.createText();
-    await loadFontsAsync([text]);
-    text.characters = content;
-    text.fontSize = 16;
-    frame!.appendChild(text);
-  }
-
-  return frame;
+function getComponents() {
+  console.log('components!!!!!!!!!!!');
 }
 
-export default function () {
-  on<InsertCodeHandler>('INSERT_CODE', async function (code: string) {
-    const parsedCode = interpret(code)
-    await buildInterface(parsedCode);
+export default function() {
+  on<InsertCodeHandler>('INSERT_CODE', async function(code: string) {
+    const parsedCode :CompilerData = interpret(code)
+    console.log("parsed: ", parsedCode)
+    parsedCode.body.forEach(async (statement :Declaration) => {
+      console.log(statement)
+      await buildInterface(statement);
+    })
   })
-  showUI({ width: 400, height: 720 })
+  showUI({ width: 440, height: 660 })
 }
