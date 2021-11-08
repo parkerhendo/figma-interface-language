@@ -54,14 +54,16 @@ export default class Parser implements IParser {
 
   Declaration() :Declaration | Token {
     switch (this.advance?.type) {
+      case TokenType.TOKEN_DEFINE:
+      case TokenType.TOKEN_DECLARE:
       case TokenType.TOKEN_DESCRIBE: {
         this.eat(TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
 
         const descriptor = this.Descriptor().type;
 
-        const name = this.eat(TokenType.TOKEN_STRING, "Expected STRING after 'as'");
+        const name = this.eat(TokenType.TOKEN_STRING, "Expected {STRING} before 'as'");
 
-        this.eat(TokenType.TOKEN_AS, "Expected 'as' before name.");
+        this.eat(TokenType.TOKEN_AS, "Expected 'as' after name.");
 
         const body = this.advance.value !== TokenType.TOKEN_RIGHT_BRACE 
                       ? this.DeclarationBody() 
@@ -80,6 +82,8 @@ export default class Parser implements IParser {
         }
     }
   }
+
+  NumberLiteral() {}
 
   Descriptor(): Token {
     switch(this.advance?.type) {
