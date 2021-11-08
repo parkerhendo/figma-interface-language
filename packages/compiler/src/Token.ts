@@ -1,5 +1,5 @@
-import {TokenType} from './tokens';
-import Scanner from './Scanner';
+import TokenType from './types/tokenType';
+import Scanner from './scanner';
 
 
 interface IToken {

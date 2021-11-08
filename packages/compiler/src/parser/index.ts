@@ -1,6 +1,9 @@
-import Scanner from './Scanner';
-import Token, { ErrorToken } from './Token';
-import { TokenType } from './tokens';
+import Scanner from '../scanner';
+import Token, { ErrorToken } from '../Token';
+
+import TokenType from '../types/tokenType';
+import Parameters from '../types/parameters';
+import Declaration from '../types/declaration';
 
 interface IParser {
   source: string;
@@ -8,22 +11,9 @@ interface IParser {
   advance: Token | null;
 }
 
-export type Parameters = {
-  name: string,
-}
-
-export type Declaration = {
-  type: TokenType,
-  descriptor: TokenType,
-  params?: Parameters,
-  body?: any
-} | undefined;
-
-export type DeclarationList = Declaration[];
-
 export type Doc = { 
   type: string,
-  body: DeclarationList 
+  body: Declaration[] 
 };
 
 export default class Parser implements IParser {
@@ -52,7 +42,7 @@ export default class Parser implements IParser {
     }
   }
 
-  DeclarationList(stopAdvance: TokenType | null = null): DeclarationList {
+  DeclarationList(stopAdvance: TokenType | null = null): Declaration[] {
     const declarationList: Declaration[] = [this.Declaration() as Declaration];
 
     while (this.advance != null && this.advance.type != stopAdvance) {
@@ -67,14 +57,15 @@ export default class Parser implements IParser {
       case TokenType.TOKEN_DESCRIBE: {
         this.eat(TokenType.TOKEN_DESCRIBE, "Expected descriptor before type.");
 
-        const descriptor = this.advance.type;
-        this.eat(TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
+        const descriptor = this.Descriptor().type;
 
         const name = this.eat(TokenType.TOKEN_STRING, "Expected STRING after 'as'");
 
         this.eat(TokenType.TOKEN_AS, "Expected 'as' before name.");
 
-        const body = this.advance.value !== TokenType.TOKEN_RIGHT_BRACE ? this.DeclarationBody() : [];
+        const body = this.advance.value !== TokenType.TOKEN_RIGHT_BRACE 
+                      ? this.DeclarationBody() 
+                      : [];
 
         return {
           type: TokenType.TOKEN_DESCRIBE,
@@ -90,11 +81,26 @@ export default class Parser implements IParser {
     }
   }
 
+  Descriptor(): Token {
+    switch(this.advance?.type) {
+      case TokenType.TOKEN_INTERFACE:
+        return this.eat(TokenType.TOKEN_INTERFACE, "Expected type after descriptor");
+      case TokenType.TOKEN_COMPONENT:
+        return this.eat(TokenType.TOKEN_COMPONENT, "Expected type after descriptor");
+      case TokenType.TOKEN_FLOW:
+        return this.eat(TokenType.TOKEN_FLOW, "Expected type after descriptor");
+      default:      
+        return this.eat(TokenType.TOKEN_IDENTIFIER, `Unexpected token: ${this.advance?.value}`);
+    }
+  }
+
   DeclarationBody() {
     this.eat(TokenType.TOKEN_LEFT_BRACE, "Expected '{' before block");
     const body = this.advance?.type === TokenType.TOKEN_RIGHT_BRACE ? null : this.advance?.value.slice(1, -1);
+
     this.eat(TokenType.TOKEN_STRING, "Value should be a string.");
     this.eat(TokenType.TOKEN_RIGHT_BRACE, "Expected '}' after block.")
+
     return body;
   }
 

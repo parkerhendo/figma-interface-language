@@ -1,4 +1,4 @@
-import Parser, {Doc} from './Parser';
+import Parser, {Doc} from './parser';
 
 export function interpret(source :string): Doc {
   const parser = new Parser();
@@ -12,7 +12,7 @@ function exec() {
 
   const program = `
     describe interface "Sign Up" as { "hello" }
-    describe interface "What's Up" as { "fren" }
+    describe component "What's Up" as { "fren" }
   `;
 
   const prog = parser.parse(program);
@@ -20,4 +20,4 @@ function exec() {
 }
 
 // manual text
-// exec();
+exec();

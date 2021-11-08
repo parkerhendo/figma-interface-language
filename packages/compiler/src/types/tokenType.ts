@@ -1,4 +1,4 @@
-export enum TokenType {
+enum TokenType {
   TOKEN_EOF = '\0',
   TOKEN_ERROR = 'TOKEN_ERROR',
   TOKEN_IDENTIFIER = 'TOKEN_IDENTIFIER',
@@ -29,3 +29,5 @@ export enum TokenType {
   TOKEN_COLEN = 'TOKEN_COLEN',                       // ';' and ':'
   TOKEN_COMMA = 'TOKEN_COMMA'                                           // ''
 }
+
+export default TokenType;
