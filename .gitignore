@@ -1,3 +1,4 @@
 packages/**/build
+packages/**/plugin
 node_modules
 *.js
