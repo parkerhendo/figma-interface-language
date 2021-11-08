@@ -1,4 +1,5 @@
 packages/**/build
-packages/**/plugin
 node_modules
 *.js
+packages/plugin/build/ui.js
+packages/plugin/build/main.js
