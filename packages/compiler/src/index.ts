@@ -16,8 +16,9 @@ function exec() {
   `;
 
   const prog = parser.parse(program);
+  console.log(typeof prog)
   console.log(JSON.stringify(prog, null, 2));
 }
 
 // manual text
-// exec();
+exec();
