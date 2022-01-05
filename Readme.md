@@ -14,8 +14,8 @@ define ButtonColor = "#000000"
 declare Component as "Header" {
   group(direction: "column", alignment: "center") {
     Logo
-    Title[string]
-    Subtitle[string]
+    Title(title)
+    Subtitle(subtitle)
   } 
 }
 
