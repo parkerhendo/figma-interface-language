@@ -11,6 +11,15 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "test": "jest",
     "start": "nodemon --exec ts-node src/index.ts ../../misc/frame.fil"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/jest": "^27.4.0",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7"
   }
 }
